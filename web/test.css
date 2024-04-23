@@ -1,0 +1,23 @@
+layout{
+    width: 676px;
+height: 577px;
+flex-shrink: 0;
+background: #E9E9E3;
+}
+
+style{
+    display: flex;
+width: 228px;
+height: 52px;
+flex-direction: column;
+justify-content: center;
+flex-shrink: 0;
+
+
+color: #000;
+font-family: Italiana;
+font-size: 32px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
