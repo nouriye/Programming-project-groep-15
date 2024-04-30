@@ -196,18 +196,20 @@ h2 {
 .content-4 .cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /* Trois colonnes égales */
+
     gap: 20px;
-    /* Espace entre les éléments */
+
 }
 
 .cards {
+
     padding: 20px 0;
     display: grid;
 }
 
 .card {
-    background-color: #ffffff;
+    background-color: #1d2146;
+    color: rgb(209, 199, 180);
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -216,4 +218,11 @@ h2 {
 
 .card h3 {
     margin: 10px 10px 10px 10px;
+}
+
+.cards .card:hover {
+    background: #f1f1f1;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    color: rgb(10, 10, 10);
 }
