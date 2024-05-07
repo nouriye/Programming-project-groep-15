@@ -187,3 +187,36 @@ h2 {
     transform: translateX(-50%);
 
 }
+
+.content-4 .cards {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 5px;
+
+}
+
+.cards {
+
+    padding: 10px 0;
+    display: grid;
+}
+
+.card {
+    background-color: #1d2146;
+    color: rgb(209, 199, 180);
+    border-radius: 10px;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    text-align: center;
+}
+
+.card h3 {
+    margin: 5px 5px 5px 5px;
+}
+
+.cards .card:hover {
+    background: #f1f1f1;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    color: rgb(10, 10, 10);
+}
