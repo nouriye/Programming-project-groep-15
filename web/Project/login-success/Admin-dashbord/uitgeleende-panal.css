@@ -243,15 +243,26 @@ table tr {
     margin-bottom: 2px;
 }
 
+
 table th,
 table td {
-    padding: 1.5em;
+    padding: 0.7em;
     text-align: center;
 
 }
 
 table th {
     font-size: 10px;
-    letter-spacing: .1em;
+
+    letter-spacing: 0.1em;
     text-transform: uppercase;
+}
+
+th {
+    font-weight: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #6d6da4;
+    margin: 10px 10px 10px 10px;
+    color: black;
+
 }
