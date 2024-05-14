@@ -266,3 +266,10 @@ th {
     color: white;
 
 }
+
+#a {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+}
