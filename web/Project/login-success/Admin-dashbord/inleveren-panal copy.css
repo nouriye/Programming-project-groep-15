@@ -27,9 +27,6 @@ h2 {
     color: white;
     padding: 3px 8px;
     text-align: center;
-
-
-
 }
 
 .btn:hover {
@@ -80,7 +77,6 @@ h2 {
 
 
 .container {
-    margin-left: 30px;
     position: absolute;
     right: 0;
     width: 80vw;
@@ -123,8 +119,6 @@ h2 {
 .container .header .nav .search {
     margin-right: 20px;
 }
-
-
 
 .container .header .nav .search input[type="text"] {
     border: none;
@@ -169,7 +163,6 @@ h2 {
 }
 
 .content {
-
     margin-top: 45px;
     padding: 20px;
 }
@@ -223,148 +216,123 @@ h2 {
     color: rgb(10, 10, 10);
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
-p {
-    color: red;
-    font-size: 20px;
-    font-weight: bold;
+.hicon:nth-child(1):after {
+    content: '';
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    background: red;
+    border-radius: 10px;
+    left: 13px;
+    top: 7px;
+    transform: scale(0.5);
+    box-shadow: 0 0 0 0 rgba(255, 82, 82, 1);
+    animation: pulse-red 2s infinite;
+    cursor: pointer;
+
 }
+
+@keyframes pulse-red {
+    0% {
+        transform: scale(0.85);
+        box-shadow: 0 0 0 0 rgba(255, 82, 82, 0.7);
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 25px rgba(255, 82, 82, 0);
+    }
+
+    100% {
+        transform: scale(0.85);
+        box-shadow: 0 0 0 0 rgba(255, 82, 82, 0);
+    }
+}
+
 
 table {
     border-collapse: collapse;
-    margin-left: 20px;
+    margin: 0;
     padding: 0;
     width: 100%;
-    height: 100%;
     table-layout: fixed;
     border-spacing: 0 15px;
 }
 
 table tr {
-    background-color: #d7d7d7;
-    border: 1px solid #9e9c9c !important;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd !important;
     padding: .20em;
     margin-bottom: 2px;
 }
 
-
 table th,
 table td {
-    padding: 0.7em;
+    padding: 1.5em;
     text-align: center;
 
 }
 
 table th {
     font-size: 10px;
-
-    letter-spacing: 0.1em;
+    letter-spacing: .1em;
     text-transform: uppercase;
 }
 
-th {
-    font-weight: 30px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: #50508a;
-    margin: 10px 10px 10px 10px;
-    color: white;
-
-}
-
-td {
-    font-size: 12px;
-    font-weight: bold;
-    color: black;
-}
-
-
-.switch {
-    position: relative;
-    width: 100px;
-    height: 30px;
-    border-radius: 25px;
+.tab-img {
     display: inline-block;
+    width: 30px;
+    vertical-align: middle;
+    border: 1px solid #000;
+    border-radius: 18px;
+
 }
 
-
-.switch input {
-    appearance: none;
-    width: 100px;
-    height: 30px;
-    border-radius: 25px;
-    background: #1e1e1e;
-    outline: none;
-    position: relative;
-    transition: background 0.4s;
-}
-
-
-.switch label {
+.pe {
+    content: '';
     position: absolute;
-    top: 5px;
-    left: 5px;
-    right: 5px;
-    bottom: 5px;
-    background: #ffffff;
-    border-radius: 20px;
-    transition: left 0.4s 0.2s, right 0.4s 0.2s;
+    width: 7px;
+    height: 7px;
+    background: red;
+    border-radius: 10px;
+    left: 10px;
+    top: 37px;
+    transform: scale(0.5);
+    box-shadow: 0 0 0 0 rgba(255, 82, 82, 1);
+    animation: pulse-red 2s infinite;
+    cursor: pointer;
 }
 
-
-.switch input::before,
-.switch input::after {
-    content: attr(data-before);
+.de {
+    content: '';
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-weight: bold;
-    color: white;
-    text-align: center;
-    width: 50%;
-    transition: color 0.5s;
+    width: 7px;
+    height: 7px;
+    background: green;
+    border-radius: 10px;
+    left: 10px;
+    top: 37px;
+    transform: scale(0.5);
+    box-shadow: 0 0 0 0 rgba(255, 82, 82, 1);
+    animation: pulse-green 2s infinite;
+    cursor: pointer;
 }
 
-.switch input::before {
-    content: 'Yes';
-    left: 5px;
-    color: #57aa04d8;
-}
+@keyframes pulse-green {
+    0% {
+        transform: scale(0.85);
+        box-shadow: 0 0 0 0 rgba(82, 255, 82, 0.7);
+    }
 
-.switch input::after {
-    content: 'No';
-    right: 5px;
-}
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 25px rgba(82, 255, 82, 0);
+    }
 
-
-.switch input:checked {
-    background: #ff9800;
-}
-
-.switch input:checked::before,
-.switch input:checked::after {
-    color: #ff9800;
-}
-
-.switch input:checked+label {
-    left: 50px;
-    right: 10px;
-    background: #1e1e1e;
-}
-
-
-.switch input:not(:checked) {
-    background: #1e1e1e;
-}
-
-.switch input:not(:checked)::before {
-    color: #ffffff;
-}
-
-.switch input:not(:checked)::after {
-    color: white;
-}
-
-.switch input:not(:checked)+label {
-    left: 5px;
-    right: 50px;
+    100% {
+        transform: scale(0.85);
+        box-shadow: 0 0 0 0 rgba(82, 255, 82, 0);
+    }
 }
