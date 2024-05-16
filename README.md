@@ -22,7 +22,7 @@ Repo groep 15 - Programming Project 2024
 
 Dit project werd gemaakt voor de MediaLab in de campus Kaai van de Erasmushogeschool Brussel. Een makkelijke user interface om een toestel te kunnen reserven en voor de medewerker een effeciëntere manier om te werken. 
 
-We gebruikte Html, CSS, JavaScript en MongoDB als technlogiëen,
+
 
 # Technologieën 
 - HTML
