@@ -40,7 +40,7 @@ Dit project werd gemaakt voor de MediaLab in de campus Kaai van de Erasmushogesc
 
 
 
-Om te kunnen inloggen heb je uw EhB credentials nodig 
+Om te kunnen inloggen heb je uw EhB credentials nodig (meer info over hoe het te gebruiken nog te komen) 
 
 
 
