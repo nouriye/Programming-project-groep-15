@@ -7,8 +7,10 @@
 
 - [About](https://github.com/nouriye/Programming-project-groep-15/edit/main/README.md#about)
 - [Technlogieën](https://github.com/nouriye/Programming-project-groep-15/edit/main/README.md#technologie%C3%ABn)
-- [How to use](https://github.com/nouriye/Programming-project-groep-15/edit/main/README.md#how-to-use)
+- [How to use](https://github.com/nouriye/Programming-project-groep-15/tree/main?tab=readme-ov-file#how-to-use)
 - [Bronnen](https://github.com/nouriye/Programming-project-groep-15/edit/main/README.md#bronnen)
+
+
 
 
 
