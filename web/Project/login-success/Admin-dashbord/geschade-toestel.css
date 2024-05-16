@@ -277,7 +277,6 @@ td {
     color: black;
 }
 
-
 .switch {
     position: relative;
     width: 100px;
@@ -285,7 +284,6 @@ td {
     border-radius: 25px;
     display: inline-block;
 }
-
 
 .switch input {
     appearance: none;
@@ -298,7 +296,6 @@ td {
     transition: background 0.4s;
 }
 
-
 .switch label {
     position: absolute;
     top: 5px;
@@ -309,7 +306,6 @@ td {
     border-radius: 20px;
     transition: left 0.4s 0.2s, right 0.4s 0.2s;
 }
-
 
 .switch input::before,
 .switch input::after {
@@ -335,7 +331,6 @@ td {
     right: 5px;
 }
 
-
 .switch input:checked {
     background: #ff9800;
 }
@@ -350,7 +345,6 @@ td {
     right: 10px;
     background: #1e1e1e;
 }
-
 
 .switch input:not(:checked) {
     background: #1e1e1e;
