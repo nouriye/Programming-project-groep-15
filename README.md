@@ -3,6 +3,16 @@
 
 ![image](https://github.com/nouriye/Programming-project-groep-15/assets/133105442/bb2d14e4-3efa-483e-bc9d-f08c2926b95d)
 
+## Table of contents
+
+- [About](https://github.com/nouriye/Programming-project-groep-15/edit/main/README.md#about)
+- [Technlogieën](https://github.com/nouriye/Programming-project-groep-15/edit/main/README.md#technologie%C3%ABn)
+- [How to use](https://github.com/nouriye/Programming-project-groep-15/edit/main/README.md#how-to-use)
+- [Bronnen](https://github.com/nouriye/Programming-project-groep-15/edit/main/README.md#bronnen)
+
+
+
+
 
 Repo groep 15 - Programming Project 2024
 
