@@ -8,7 +8,7 @@ padding: 0;
 
 .header-background {
     background: #E9E9E3; 
-    width: 1282px; 
+    width: 1579px; 
     height: 122px; 
     flex-shrink: 0;
     margin-top: 80px;
@@ -95,7 +95,7 @@ text-transform: uppercase;
 .categories-container {
     display: block;
     flex-direction: column;
-    padding: 45px;
+    padding: 90px;
 }
 
 .categories-header {
@@ -122,6 +122,7 @@ text-transform: uppercase;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    text-align: left;
 }
 
 .category {
@@ -166,7 +167,9 @@ text-transform: uppercase;
 .merk-countainer {
     display: block;
     flex-direction: column;
-    padding: 30px;
+    padding: 90px;
+
+
 
 }
 .merk-header {
@@ -176,7 +179,10 @@ font-size: 36px;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
+margin-bottom: 10px;
 text-transform: uppercase;
+
+
 }
 
 .merk-row {
@@ -215,7 +221,7 @@ flex-direction: column;
 
 .school-logo {
     position:relative; 
-    left: -14cm; 
+    left: -18cm; 
 
 
 }
@@ -224,4 +230,16 @@ flex-direction: column;
     width: 227px;
     height: 54px;
     flex-shrink: 0;
+}
+
+td{
+
+    line-height: 50px;
+}
+
+ul{
+
+    list-style: none;
+    line-height: 50px;
+    padding: 0px;
 }
