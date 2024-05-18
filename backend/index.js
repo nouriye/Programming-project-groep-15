@@ -1,438 +1,204 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 const app= express();
 const cors= require('cors')
 const{v4:uuidv4,validate: uuidValidate}= require('uuid');
-const {MongoClient, UUID}= require('mongodb')
+const {MongoClient, UUID, Timestamp, ObjectId}= require('mongodb')
 require('dotenv').config()
-
-//mongoclient 
+app.use(bodyParser.json()); 
 const client= new MongoClient(process.env.FINAL_URL);
-//users array
-let users=[];
-
 app.use(express.urlencoded({extended:false}))
 app.use(cors())
 app.use(express.json())
 
-//mongodb
+app.get("/displayy",async(req,resp)=>{
 
-app.get("/mongo", async (req,resp)=> {
     try{
         await client.connect();
-
-        const coll= client.db('login').collection('users');
-        const users= await coll.find({}).toArray();
-        resp.status(200).send(users);
+         const coll= client.db('login').collection('producten');
+         const winkelmand= await coll.find({}).toArray();
+        
+        console.log(winkelmand)
+        resp.status(200).json({
+            status:"succes",
+            data:winkelmand
+        }); 
     }catch(error){
-        console.log(error)
-        resp.status(500).send({
-            error: 'something went wrong',
-            value:error
+    
+    }finally{
+        await client.close();
+    }
+});
+
+app.post("/display",async(req,resp)=>{
+    
+    try{
+        await client.connect();
+        const coll= client.db('login').collection('producten');
+        const querry= { merk : req.body.merk};
+        const results=await coll.findOne(querry);
+
+        const coll2= client.db('login').collection('winkelmand');
+            const winkelmand={
+                Geselecteerde_Apparaten: [results],
+                datum: "nu",    
+            }
+            const results2= await coll2.insertOne(winkelmand);
+            resp.status(200).send({
+            status:'ok',
+            data: {merk:results.merk}
+        });   
+    }catch(error){
+    console.error(error);
+    }finally{
+await client.close();
+    }
+});
+app.post("/uitleentermijn",async(req,resp)=>{
+
+    let Startdatum= req.body.Startdatum;
+    let Einddatum= req.body.Einddatum;
+
+    try{
+        await client.connect();
+        const KalenderData= client.db('login').collection('uitleningen');
+        var uitleentermijn={
+            //Geselecteerde_Apparaten: [results],
+            //datum: "nu",
+            sdatum:Startdatum,
+            edatum: Einddatum
+        }
+        const results= await KalenderData.insertOne(uitleentermijn);
+        resp.status(200).send({
+            status:'ok',
+            data:results
+            
         });
-         }finally{
-            await client.close()    
-         }
-})
+    }catch(error){
+        console.error(error);
+    }finally{
+    await client.close();
+    }
+    
 
-//create
-// check for empty fields
-app.post ("/register",async (req,res)=>{
-if(!req.body.username || !req.body.email || !req.body.password){
-    res.status(401).send({
-        status: "bad request",
-        message: "some field are missing"
-    });return
+});
+app.post("/uitleen",async(req,resp)=>{
+    try{  await client.connect()
+        let datareq= client.db('login').collection('uitleningen');
+        let datareq2= await datareq.find({}).toArray();
+        resp.status(200).send({
+            status:'ok',
+            data:{
+                data:datareq2,
+            }
+            });
+        
+    }catch{
 
+    }finally{
+        
+    }
+
+  
+});
+app.post("/uitleen_display",async(req,resp)=>{
+    try{  await client.connect()
+        let datareq= client.db('login').collection('Schadelijst');
+        let datareq2= await datareq.find({}).toArray();
+        resp.status(200).send({
+            status:'ok',
+            data:{
+                data:datareq2,
+            }
+            });
+    }catch{
+
+    }finally{
+        
+    }
+});
+app.post("/geschade_toestellen",async(req,resp)=>{
+    try{
+        await client.connect()
+        let Toestellen_Db=client.db('login').collection('//');
+        let Toestellen_Db_Data=await Toestellen_Db.find({}).toArray();
+
+        resp.status(200).send({
+            status:'ok',
+            data:Toestellen_Db_Data
+        });
+    }catch(error){
+
+    }finally{
+        await client.close();
+    }
+});
+
+app.post("/blacklist",async(req,resp)=>{
+    try{
+        await client.connect()
+        let Blacklist_Db=client.db('login').collection('//');
+        let Blacklist_Db_Data=await Toestellen_Db.find({}).toArray();
+
+        resp.status(200).send({
+            status:'ok',
+            data:Blacklist_Db_Data
+        });
+    }catch(error){
+
+    }finally{
+        await client.close();
+    }
+});
+app.get("/Toestel_inleveren",async(req,resp)=>{
+try{
+    await client.connect()
+    //uitleningen data ophalen 
+    let Uitleningen_Db=client.db('login').collection('uitleningen');
+    let Uitleningen_Data= await Uitleningen_Db.find({}).toArray();
+
+    resp.status(200).send({
+        status:"ok",
+        data:Uitleningen_Data
+    });
+}catch(error){
+
+}finally{
+    await client.close();
 }
 
-/*save users to Array 
-users.push({
-username:req.body.username,
-email:req.body.email,
-password:req.body.password,
-})*/
-try{
-    await client.connect();
-
-    const user= {
-        username: req.body.username,
-        email:req.body.email,
-        password:req.body.password,
-        uuid: uuidv4() 
-    }
-    const coll= client.db('login').collection('users');
-    const insert= await coll.insertOne(user)
-    
-    // response if okay
-res.status(201).send({
-    status:"Authentication succesfull",
-    message: "user saved",
-    data: insert
-})
-}catch(error){
-    console.log(error)
-    resp.status(500).send({
-        error: 'something went wrong',
-        value:error
-    });
-     }finally{
-        await client.close();    
-     }
-})
-
-/*save users to Array 
-users.push({
-username:req.body.username,
-email:req.body.email,
-password:req.body.password,
-})*/
-console.log(users)
-
-//read
-app.post("/login",async(req,res)=>{
-    if( !req.body.email || !req.body.password){
-        res.status(401).send({
-            status: "bad request",
-            message: "some field are missing"
-        }); return
-    }else{
-        try{
-            await client.connect();
-        
-            const loginuser= {
-                
-                email:req.body.email,
-                password:req.body.password
-            };
-            const coll= client.db('login').collection('users');
-            //const insert= await coll.insertOne(user)
-            const query={email :loginuser.email}
-            const user= await coll.findOne(query)
-              
-            if(user){
-
-                if(user.password == loginuser.password){
-            
-                    res.status(200).send({
-                        status: "Authentication succesfull",
-                        message:"you're finally awake",
-                        data: {
-                            username:user.username,
-                            email:user.email,
-                            uuid:user.uuid, } 
-
-                        
-                    });
-                }else{
-                    res.status(401).send({
-                        status: "Authentication error",
-                        message:"password in incorrect"
-                    }); 
-                     }
-                }else{
-                    res.status(401).send({
-                        status: "Authentication error",
-                        message:"no user been found"
-                    })        
-                   }
-          // response if okay
-        /*res.status(201).send({
-            status:"nahh",
-            message: "user saved",
-            data: insert
-        });*/
-        }catch(error){
-            console.log(error)
-            res.status(500).send({
-                error: 'something went wrong',
-                value:error
-            });
-             }finally{
-                await client.close();    
-             }
-        
-    //check for user in array
-//let user=users.find(Element=>Element.email == req.body.email)
-
-    }
-    
 });
-//verify 
-app.post("/verifylogin",async(req,res)=>{
-    if(!req.body.uuid){
-        res.status(401).send({
-            status: "bad request",
-            message: "some field are missing"
-        });return 
-    }else{
-        if(!uuidValidate(req.body.uuid)){
-            res.status(401).send({
-                status: "bad request",
-                message: "invalid uid"
-            });return
-        }
-        try{
-            await client.connect();
-        
-            const loginuser= {
-                
-                email:req.body.email,
-                password:req.body.password
-            };
-            const coll= client.db('login').collection('users');
-            //const insert= await coll.insertOne(user)
-            const query={uuid : req.body.uuid}
-            const user= await coll.findOne(query)
-              
-            if(user){
+app.get("/Toestel/:id", async (req, res) => {
+    try {
+        await client.connect();
+        const id = req.params.id;
+        let Uitleningen_Db = client.db('login').collection('uitleningen');
+        let item = await Uitleningen_Db.findOne({ _id: new ObjectId(id)});
 
-                    res.status(200).send({
-                        status: "Authentication succesfull",
-                        message:"Looks like meat is back on the menu boys!",
-                        data:{username:user.username,
-                        email:user.email,
-                    uuid:user.uuid}
-                    });
-                }else{
-                    res.status(401).send({
-                        status: "verify error",
-                        message:"no uid exists"
-                    }) 
-                     
-                }
-          // response if okay
-        /*res.status(201).send({
-            status:"nahh",
-            message: "user saved",
-            data: insert
-        });*/
-        }catch(error){
-            console.log(error)
-            res.status(500).send({
-                error: 'something went wrong',
-                value:error
-            });
-             }finally{
-                await client.close();    
-             }
+    } catch (error) {
+        console.error(error);
         
-    //check for user in array
-//let user=users.find(Element=>Element.email == req.body.email)
-
+    } finally {
+        await client.close();
     }
-    
 });
-//delete
-app.post("/delete",async(req,res)=>{
-    if( !req.body.email || !req.body.password){
-        res.status(401).send({
-            status: "bad request",
-            message: "some field are missing"
-        }); return
-    }else{
-        try{
-            await client.connect();
-        
-            const loginuser= {
-                
-                email:req.body.email,
-                password:req.body.password
-            };
-            const coll= client.db('login').collection('users');
-            //const insert= await coll.insertOne(user)
-            const query={email :loginuser.email}
-            const user= await coll.findOne(query)
-            console.log('user');
-            console.log('loginuser');
-              
-            if(user){
+app.delete("/Toestel/:id", async (req, res) => {
+    try {
+        await client.connect();
+        const id = req.params.id;
+        let Uitleningen_Db = client.db('login').collection('uitleningen');
+        let result = await Uitleningen_Db.deleteOne({ _id: new ObjectId(id) });
 
-                if(user.password == loginuser.password){
-                    await coll.deleteOne(user);
-                    
-                    res.status(200).send({
-                        status: "Authentication succesfull",
-                        message:"user sucessully deleted",
-                        data: {
-                            username:user.username,
-                            email:user.email,
-                            uuid:user.uuid, } 
-
-                        
-                    });
-                }else{
-                    res.status(401).send({
-                        status: "error",
-                        message:"password in incorrect"
-                    }); 
-                     }
-                }else{
-                    res.status(401).send({
-                        status: "Authentication error",
-                        message:"no user been found"
-                    })        
-                   }
-          // response if okay
-        /*res.status(201).send({
-            status:"nahh",
-            message: "user saved",
-            data: insert
-        });*/
-        }catch(error){
-            console.log(error)
-            res.status(500).send({
-                error: 'something went wrong',
-                value:error
-            });
-             }finally{
-                await client.close();    
-             }
-        
-    //check for user in array
-//let user=users.find(Element=>Element.email == req.body.email)
-
+    } catch (error) {
+        console.error(error);
+        res.status(500).send({
+            status: "error",
+            message: "error"
+        });
+    } finally {
+        await client.close();
     }
-    
 });
-
-
-//update 
-app.post("/update",async(req,res)=>{
-    if( !req.body.email || !req.body.password){
-        res.status(401).send({
-            status: "bad request",
-            message: "some field are missing"
-        }); return
-    }else{
-        try{
-            await client.connect();
-        
-            const loginuser= {
-                
-                email:req.body.email,
-                password:req.body.password
-            };
-            const coll= client.db('login').collection('users');
-            //const insert= await coll.insertOne(user)
-            const query={email :loginuser.email}
-            const user= await coll.findOne(query)
-            
-              
-            if(user){
-
-                if(user.email == loginuser.email){
-                    const result= await coll.updateOne(
-                        {email: user.email},
-                        {$set :{password :loginuser.password}});
-                    res.status(200).send({
-                        status: "Authentication succesfull",
-                        message:"user sucessully updated",
-                        data: {
-                            username:user.username,
-                            email:user.email,
-                            uuid:user.uuid, } 
-
-                        
-                    });
-                }else{
-                    res.status(401).send({
-                        status: "error",
-                        message:"password in incorrect"
-                    }); 
-                     }
-                }else{
-                    res.status(401).send({
-                        status: "Authentication error",
-                        message:"no user been found"
-                    })        
-                   }
-    
-        }catch(error){
-            console.log(error)
-            res.status(500).send({
-                error: 'something went wrong',
-                value:error
-            });
-             }finally{
-                await client.close();    
-             }
-    }
-
-    
-});
-
-app.post("/winkelwagen",async(req,res)=>{
-    /*if( !req.body.email || !req.body.password){
-        res.status(401).send({
-            status: "bad request",
-            message: "some field are missing"
-        }); return*/
-    
-        try{
-            await client.connect();
-            let producten= [];
-            let productdata= {
-                producten=[],
-            };
-             // productenlijst ophalen
-             const coll= client.db('producten').collection('users');
-             //product dat je wilt selecteren uit de lijst ophalen
-             const query={producten:winkelwagen.producten}
-             //const item= await coll.find(query);
- 
-             //winkelmand ophalen 
-             const inventory= client.db('winkelmand').collection('users'),   
-            if(productdata){
-
-                if(!producten){
-             // product toevoegen aan winkelmand 
-             const update=inventory.insertOne(query);
-                    res.status(200).send({
-                        status: "Authentication succesfull",
-                        message:"ok",
-                        data: {
-                            username:user.username,
-                            email:user.email,
-                            uuid:user.uuid, } 
-                    
-                        
-                    });
-                    
-                }else{
-                    res.status(401).send({
-                        status: "Authentication error",
-                        message:"password in incorrect"
-                    }); 
-                     }
-                }else{
-                    res.status(401).send({
-                        status: "Authentication error",
-                        message:"no user been found"
-                    })        
-                   }
-          // response if okay
-        /*res.status(201).send({
-            status:"nahh",
-            message: "user saved",
-            data: insert
-        });*/
-        }catch(error){
-            console.log(error)
-            res.status(500).send({
-                error: 'something went wrong',
-                value:error
-            });
-             }finally{
-                await client.close();    
-             }
-        
-    //check for user in array
-//let user=users.find(Element=>Element.email == req.body.email)
-
-    }
-    
-});
-
 
 app.listen(3000);
 console.log('app running');
