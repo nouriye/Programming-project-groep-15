@@ -223,12 +223,12 @@ h2 {
     position: absolute;
     width: 7px;
     height: 7px;
-    background: red;
+    background: rgb(0, 255, 60);
     border-radius: 10px;
     left: 13px;
     top: 7px;
     transform: scale(0.5);
-    box-shadow: 0 0 0 0 rgba(255, 82, 82, 1);
+    box-shadow: 0 0 0 0 rgb(82, 255, 114);
     animation: pulse-red 2s infinite;
     cursor: pointer;
 
@@ -237,7 +237,7 @@ h2 {
 @keyframes pulse-red {
     0% {
         transform: scale(0.85);
-        box-shadow: 0 0 0 0 rgba(255, 82, 82, 0.7);
+        box-shadow: 0 0 0 0 rgba(148, 242, 7, 0.7);
     }
 
     70% {
@@ -270,32 +270,27 @@ table tr {
 
 table th,
 table td {
-    padding: 1.5em;
+    padding: 0.5em;
     text-align: center;
 
 }
 
 table th {
+    margin: 2px;
     font-size: 10px;
     letter-spacing: .1em;
     text-transform: uppercase;
+    background-color: #1d2146;
+    color: white;
 }
 
-.tab-img {
-    display: inline-block;
-    width: 30px;
-    vertical-align: middle;
-    border: 1px solid #000;
-    border-radius: 18px;
-
-}
 
 .pe {
     content: '';
     position: absolute;
     width: 7px;
     height: 7px;
-    background: red;
+    background: rgb(149, 255, 0);
     border-radius: 10px;
     left: 10px;
     top: 37px;
@@ -335,4 +330,54 @@ table th {
         transform: scale(0.85);
         box-shadow: 0 0 0 0 rgba(82, 255, 82, 0);
     }
+}
+
+.klop {
+
+    background: rgb(247, 247, 247);
+    height: 40px;
+    width: 90px;
+    position: absolute;
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.label1,
+.label2 {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(to bottom,
+            white 0, white 45px,
+            #2c2c2c 45px, #2c2c2c 90px);
+    position: absolute;
+    top: 0;
+    color: #2c2c2c;
+    transition: 0.5s;
+}
+
+.label2 {
+    right: 0;
+}
+
+span {
+    display: flex;
+    width: 60px;
+    height: 30px;
+    justify-content: center;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 12px;
+}
+
+input:checked+.label {
+    background-position: 0 -50px;
+    color: white;
+    transition: 0.6s;
+    ;
 }
