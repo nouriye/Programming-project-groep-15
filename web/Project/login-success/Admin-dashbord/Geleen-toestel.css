@@ -272,3 +272,17 @@ td {
     font-weight: bold;
     color: black;
 }
+
+.btn-1 {
+    background: #3a3a63;
+    color: white;
+    padding: 3px 8px;
+    text-align: center;
+}
+
+.btn-1:hover {
+    background: rgb(148, 146, 146);
+    color: #f1f1f1;
+    padding: 3px 8px;
+    border: 2px solid #6d6da4;
+}
