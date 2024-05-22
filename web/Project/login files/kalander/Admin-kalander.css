@@ -2,6 +2,10 @@ body {
     margin-top: 40px;
     font-size: 14px;
     font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+    background: transparent;
+    background-image: url(kisspng-erasmushogeschool-brussel-vrije-universiteit-bruss-chaps-5b337466156997.2017042315300987900877\ \(1\)\ copy.png);
+    background-repeat: no-repeat;
+    background-size: center;
 }
 
 #external-events {
@@ -11,7 +15,7 @@ body {
     width: 150px;
     padding: 0 10px;
     border: 1px solid #ccc;
-    background: #eee;
+    background: #d3dee7;
     text-align: left;
 }
 
@@ -29,7 +33,7 @@ body {
 #external-events p {
     margin: 1.5em 0;
     font-size: 11px;
-    color: #666;
+    color: #524f4f;
 }
 
 #external-events p input {
