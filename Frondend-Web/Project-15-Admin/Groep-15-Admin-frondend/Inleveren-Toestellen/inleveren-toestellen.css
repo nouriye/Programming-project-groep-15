@@ -17,9 +17,10 @@ li {
     list-style: none;
 }
 
+
 h1,
 h2 {
-    color: #034ae3d8;
+    color: #084ad9d8;
 }
 
 .btn {
@@ -170,12 +171,6 @@ h2 {
     height: 150px;
 }
 
-
-
-
-
-
-
 .content-4 .cards {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -246,6 +241,7 @@ table {
     width: 100%;
     table-layout: fixed;
     border-spacing: 0 15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 table tr {
