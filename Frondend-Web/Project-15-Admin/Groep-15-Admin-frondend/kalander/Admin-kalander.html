@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin-kalender</title>
+    <link rel="stylesheet" href="Admin-kalander.css">
+</head>
+
+
+<body>
+    <div class="logo">
+        <img src="kisspng-erasmushogeschool-brussel-vrije-universiteit-bruss-chaps-5b337466156997.2017042315300987900877 (1) copy.png"
+            alt="logo" width="20%">
+    </div>
+    <div id='wrap'>
+        <div id='external-events'>
+            <h4>Evenement </h4>
+            <div id='external-events-list'>
+                <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event'>
+                    <div class='fc-event-main'>Ophaal-Toestellen</div>
+                </div>
+                <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event'>
+                    <div class='fc-event-main'>Inleveren-Toestellen</div>
+                </div>
+                <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event'>
+                    <div class='fc-event-main'>Ophaal-Toestellen</div>
+                </div>
+                <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event'>
+                    <div class='fc-event-main'>Gebracht-Toestellen</div>
+                </div>
+                <div class='fc-event fc-h-event fc-daygrid-event fc-daygrid-block-event'>
+                    <div class='fc-event-main'>Inleveren-Toestellen</div>
+                </div>
+            </div>
+            <p>
+                <input type='checkbox' id='drop-remove' />
+                <label for='drop-remove'>Verwijderen na het moment </label>
+            </p>
+        </div>
+        <div id='calendar-wrap'>
+            <div id='calendar'></div>
+        </div>
+    </div>
+    <script src='Admin-kalender.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.12/index.global.min.js'></script>
+
+
+</body>
+
+</html>
