@@ -11,12 +11,39 @@ document.addEventListener('DOMContentLoaded',function(){
         info.forEach(element => {
             let listitem=document.getElementById(counter.toString());
             listitem.textContent=`${item[element]}`;   
-            counter++;   
+            counter++;
+            
+            
         });
     }
     });
  
+
     });
+    
+    
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 async function getData(url,method,data){
     let resp= await fetch(url,{
         method:method,

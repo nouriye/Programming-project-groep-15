@@ -1,8 +1,14 @@
 
 document.addEventListener('DOMContentLoaded',function(){
+    
     let counter =1;
     let counter2=0;
-    getData("http://localhost:3000/displayy",'GET').then(data=>{
+    async function searchItems(event){
+        event.preventDefault();
+        let prodname= document.getElementById('SearchTerm').value;
+        console.log(prodname);
+        try{
+    await getData(`http://localhost:3000/displayy/${prodname}`,'GET').then(data=>{
     console.log(data);
     let items= data.data;
 
@@ -13,11 +19,46 @@ document.addEventListener('DOMContentLoaded',function(){
         info.forEach(element => {
             let listitem=document.getElementById(counter.toString());
             listitem.textContent=`${item[element]}`;   
-            counter++;  
+            counter++;
+            
+            
         });
-        }
-        });
-        });
+    }
+    }); 
+   
+    window.searchItems=searchItems;
+    }catch{
+        
+    }finally{
+        
+    }
+
+
+    
+     }
+     let Arraycounter=null;
+     document.getElementById('search').addEventListener('submit', searchItems);
+     document.getElementById('een').addEventListener('click',()=>getid('1'));
+
+    });
+     
+  
+
+function getid(IdNumber){
+let prodId=document.getElementById(`${IdNumber}`).textContent;
+sessionStorage.setItem('prodID',prodId)
+window.location.href = "../Calendar/Calendar.html";
+console.log(prodId);
+return prodId
+}
+
+
+
+
+
+
+
+
 async function getData(url,method,data){
     let resp= await fetch(url,{
         method:method,
