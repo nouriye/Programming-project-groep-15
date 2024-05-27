@@ -20,7 +20,7 @@ li {
 
 h1,
 h2 {
-    color: #57aa04d8;
+    color: #031dc8d8;
 }
 
 .btn {
@@ -28,9 +28,6 @@ h2 {
     color: white;
     padding: 3px 8px;
     text-align: center;
-
-
-
 }
 
 .btn:hover {
@@ -42,6 +39,7 @@ h2 {
 
 .side-menu {
     color: white;
+    position: fixed;
     background: #242429;
     width: 20%;
     min-height: 100vh;
@@ -49,6 +47,7 @@ h2 {
     flex-direction: column;
     flex-grow: 1;
 }
+
 
 .side-menu .brand-name {
     height: 10vh;
@@ -80,15 +79,17 @@ h2 {
 
 
 .container {
-    width: 80%;
-    min-height: 100vh;
+    position: absolute;
+    right: 0;
+    width: 78.5vw;
+    height: 100vh;
     background: #f1f1f1;
 }
 
 .container .header {
     position: fixed;
-    width: 80%;
     top: 0;
+    width: 78.5vw;
     right: 0;
     background: white;
     display: flex;
@@ -130,9 +131,6 @@ h2 {
     width: 200px;
 }
 
-
-
-
 .container .header .nav .search button {
     width: 40PX;
     height: 40px;
@@ -145,11 +143,7 @@ h2 {
 .container .header .nav .search button img {
     width: 30px;
     height: 80px;
-
 }
-
-
-
 
 .container .header .nav .user {
     display: flex;
@@ -163,11 +157,6 @@ h2 {
     border-radius: 50%;
     overflow: hidden;
     margin-left: auto;
-}
-
-.container .header .nav .user .img-case img {
-    width: 100%;
-    width: 100%;
 }
 
 .content {

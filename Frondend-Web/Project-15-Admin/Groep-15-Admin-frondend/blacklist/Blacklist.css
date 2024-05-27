@@ -28,9 +28,6 @@ h2 {
     color: white;
     padding: 3px 8px;
     text-align: center;
-
-
-
 }
 
 .btn:hover {
@@ -42,6 +39,7 @@ h2 {
 
 .side-menu {
     color: white;
+    position: fixed;
     background: #242429;
     width: 20%;
     min-height: 100vh;
@@ -80,15 +78,17 @@ h2 {
 
 
 .container {
-    width: 80%;
-    min-height: 100vh;
+    position: absolute;
+    right: 0;
+    width: 78.5vw;
+    height: 100vh;
     background: #f1f1f1;
 }
 
 .container .header {
     position: fixed;
     top: 0;
-    width: 80%;
+    width: 78.5vw;
     right: 0;
     background: white;
     display: flex;
@@ -144,8 +144,6 @@ h2 {
     height: 80px;
 }
 
-
-
 .container .header .nav .user {
     display: flex;
     align-items: center;
@@ -158,11 +156,6 @@ h2 {
     border-radius: 50%;
     overflow: hidden;
     margin-left: auto;
-}
-
-.container .header .nav .user .img-case img {
-    width: 100%;
-    width: 100%;
 }
 
 .content {
@@ -226,7 +219,6 @@ p {
 
 table {
     border-collapse: collapse;
-    margin-left: 20px;
     padding: 0;
     width: 100%;
     height: 100%;
