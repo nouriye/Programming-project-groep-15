@@ -1,22 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="stylesheet" href="bootstrap.css"> 
-    <title>Login Page</title>
+    <title>Toestellen-Pub</title>
+    <link rel="stylesheet" href="toestel publiceren.css">
 </head>
-<body class="container h-100">
- <form id="ProdBut">
-    <input type="text" name="merk" id="1">
-    <br>
-    <input type="text" name="model" id="2">
-    <br>
-    <input type="text" name="categorie" id="3">
-    <button  type="submit"></button>
-</form>
+
+<body>
+
+    <div class="side-menu">
+        <div class="brand-name">
+            <h1>Admin.</h1>
+        </div>
+        <ul>
+            <li><img src="BxBxsDashboard.png" alt="" width="25px">&nbsp;Dashbord</li>
+            <li><img src="BxBell.png" alt="" width="25px">&nbsp;Notificatie</li>
+            <li><img src="BxBxsMessageRoundedDetail.png" alt="" width="25px">&nbsp;Chats</li>
+            <li><img src="BxBxsBarChartAlt2.png" alt="" width="25px">&nbsp;Filles</li>
+            <li><img src="BxBxsCog.png" alt="" width="25px">&nbsp; Setting</li>
+        </ul>
+        <br> <br>
+        <button class="btn-1" type="submit">Logout</button>
+    </div>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <img src="kisspng-erasmushogeschool-brussel-vrije-universiteit-bruss-chaps-5b337466156997.2017042315300987900877 (1) copy.png"
+                    alt="logo" width="50px" height="80px">
+                <h2> Medialab</h2>
+            </div>
+            <div class="nav">
+                <div class="seaech">
+                    <input type="text" placeholder="Search..">
+                    <button type="submit"><img src="BxSearchAlt (1).png " width="10px" alt=""></button>
+                </div>
+                <div class="User">
+                    <div class="img-case">
+                        &nbsp; <img src="BxBxsUserCircle.png" width="35px">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="content-2">
+                <div class="panal">
+                    <div class="bp">
+
+                    </div>
+                </div>
+            </div>
+            <div class="content-3">
+                <div class="panal">
+                    <div class="bp">
+                        <h3>Dashboard</h3><br>
+                        <div class="bp-2">
+                            <h5>Beheerder Panal</h5>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-4">
+                <div class="cards">
+                    <a
+                        href="/Frondend-Web/Project-15-Admin/Groep-15-Admin-frondend/Inleveren-Toestellen/inleveren-toestellen.html">
+                        <div class="card">
+                            <div class="t-i">
+                                <h3> Toestel inleveren</h3>
+                            </div>
+                        </div>
+                    </a>
+                    <a
+                        href="/Frondend-Web/Project-15-Admin/Groep-15-Admin-frondend/Uitgeleende-Toestellen/uitgeleende-Toestellen.html">
+                        <div class="card">
+                            <div class="t-i">
+                                <h3> Uitgeleende Toestel</h3>
+                            </div>
+                        </div>
+                    </a>
+                    <a
+                        href="/Frondend-Web/Project-15-Admin/Groep-15-Admin-frondend/Geleen-Toestellen/Geleen-toestel.html">
+                        <div class="card">
+                            <div class="t-i">
+                                <h3> Toestel Uitlenen</h3>
+                            </div>
+                        </div>
+                    </a>
+                    <a
+                        href="/Frondend-Web/Project-15-Admin/Groep-15-Admin-frondend/Geschade-toestel/geschade-toestel.html">
+                        <div class="card">
+                            <div class="t-i">
+                                <h3>Geschade Toestellen</h3>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="/Frondend-Web/Project-15-Admin/Groep-15-Admin-frondend/blacklist/Blacklist.html">
+                        <div class="card">
+                            <div class="t-i">
+                                <h3> Blacklist</h3>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="/Frondend-Web/Project-15-Admin/Groep-15-Admin-frondend/Toestellen-Pub/Toestellen-pub.html">
+                        <div class="card">
+                            <div class="t-i">
+                                <h3> Toestel Publiceren</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+            <br>
+            <hr>
+            <br>
+        </div>
+
+        <div class="services-container">
+            <h3> Toestellen-Publiceren</h3><br>
+            <hr>
+
+
+            <div class="services-box">
+
+                <form id="ProdBut" action="post" type="submit">
+                    <div class="input-box">
+                        <label for="text">type:</label>
+                        <input type="text" id="1" name="type">
+                    </div>
+                    <div class="input-box">
+                        <label for="text">Model:</label>
+                        <input type="model" id="2" name="model">
+                    </div>
+                    <div class="input-box">
+
+                        <label for="text">Merk:</label>
+                        <input type="text" id="3" name="model">
+                    </div>
+                    <div id="errors"></div>
+                    <button type="submit">Add Nieuw Pub</button>
+                </form>
+
+            </div>
+        </div>
+        <script src="toestel publiceren.js"></script>
 </body>
-<script src="toestel publiceren.js"></script>
-</html>
+

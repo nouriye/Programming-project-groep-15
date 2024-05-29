@@ -1,0 +1,11 @@
+{
+    "liveServer.settings.port": 5501
+}
+    //"liveServer.settings.https":   
+
+/*"enable": true, //set it true to enable the feature.  
+"cert": "E:\\key\\domain.crt", //full path of the certificate  
+"key": "E:\\key\\domain.key", //full path of the private key  
+"passphrase": "1234"  
+}  
+}*/

@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded',function(){
 
     for(let i=0; i < items.length;i++){
         let item= items[i];
-        let info= ['KlantId','KlantNaam','ProductId','ProductNaam'];
+        let info= ['StuId','ProductId','Schade','email','stunaam'];
         
         info.forEach(element => {
             let listitem=document.getElementById(counter.toString());
