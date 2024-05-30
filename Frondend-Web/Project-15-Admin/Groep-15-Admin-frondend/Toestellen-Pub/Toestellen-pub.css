@@ -273,6 +273,8 @@ p {
     color: #fff;
     border: none;
     cursor: pointer;
+    border-radius: 14px;
+    margin-top: 15px;
 }
 
 .services-box button:hover {
