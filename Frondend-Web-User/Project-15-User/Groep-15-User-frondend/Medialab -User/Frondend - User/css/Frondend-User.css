@@ -23,7 +23,7 @@ html {
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: rgb(118, 118, 153);
+    background-color: rgb(130, 130, 130);
     color: var(--font-color);
     line-height: 1.6;
 }
@@ -384,8 +384,4 @@ section {
     font-size: 1.6rem;
     color: rgb(251, 242, 224);
     margin-top: 2rem;
-}
-
-hr {
-    color: #000000;
 }
