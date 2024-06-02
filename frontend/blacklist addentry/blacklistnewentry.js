@@ -5,6 +5,7 @@ let email= sessionStorage.getItem('email');
 document.getElementById('prodid').value=prodid;
 document.getElementById('email').value=email;
 document.getElementById('stunaam').value=username
+
 console.log(prodid);
 
 
@@ -16,7 +17,7 @@ document.getElementById('ProdBut').addEventListener('submit',async function(even
    let stunaam= document.getElementById('email').value;
    let REDEN= document.getElementById('Schade').value;
   //let info= ['email','id','stunaam','reden'];
-    
+    sessionStorage.clear();
     console.log();
 
     try{
@@ -31,7 +32,7 @@ document.getElementById('ProdBut').addEventListener('submit',async function(even
     }catch{
         
     }finally{
-        
+       
     }
 
 });  

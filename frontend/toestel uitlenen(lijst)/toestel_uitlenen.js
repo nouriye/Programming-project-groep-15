@@ -102,7 +102,7 @@ return prodId
 } 
 
 
-
+ 
 
 
 
@@ -119,3 +119,5 @@ async function getData(url,method,data){
     return await resp.json();
 
 } 
+
+//let info= ['Naam','StuId','Toestelnaam','sdatum','edatum'];

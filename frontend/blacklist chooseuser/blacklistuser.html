@@ -38,8 +38,9 @@
             </div>
             <div class="nav">
                 <div class="seaech">
-                    <input type="text" placeholder="Search..">
-                    <button type="submit"><img src="BxSearchAlt (1).png " width="10px" alt=""></button>
+                    <form action="" id="search">
+                        <input id="SearchTerm" type="text" placeholder="Search.." onsubmit="Searchitems(event)">
+                        <button type="submit"><img src="BxSearchAlt (1).png " width="10px" alt=""></button>
                 </div>
                 <div class="User">
                     <div class="img-case">
@@ -254,7 +255,7 @@
                 </tr>
             </tbody>
         </table> <br>
-        <button class="btn" type="submit">Add new Blacklist</button>
+       
     </div>
 </body>
 <script src="blacklistuser.js"></script>

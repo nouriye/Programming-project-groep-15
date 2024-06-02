@@ -23,7 +23,7 @@ let users=[];
 app.use(express.urlencoded({extended:false}))
 app.use(cors())
 app.use(express.json())
-
+ 
 //mongodb
 /*const options = {
     key: fs.readFileSync('E:\\key\\domain.key'),
@@ -122,6 +122,12 @@ app.post("/uitleentermijn",async(req,resp)=>{
     let Startdatum= req.body.Startdatum;
     let Einddatum= req.body.Einddatum;
     let prodid= req.body.ToestelId;
+    let prodnaam= req.body.prodnaam;
+    let stuid= req.body.stuid;
+    let stunaam= req.body.stunaam;
+    let stumail= req.body.stumail
+
+
     try{
         await client.connect();
         const KalenderData= client.db('login').collection('uitleningen');
@@ -130,8 +136,13 @@ app.post("/uitleentermijn",async(req,resp)=>{
         var uitleentermijn={
             
             product_Id:prodid,
+            Toestelnaam:prodnaam,
+            StuId:stuid,
+            Stumail:stunaam,
+            Naam:stumail,
             sdatum:Startdatum,
-            edatum: Einddatum
+            edatum: Einddatum,
+            
         }
         const results= await KalenderData.insertOne(uitleentermijn);
         
@@ -149,9 +160,34 @@ await client.close();
     
 
 });
-app.post("/uitleen",async(req,resp)=>{
+
+app.get("/uitleen/:prod",async(req,resp)=>{
+
+    try{
+        await client.connect();
+         const prodnaam= req.params.prod
+         const coll= client.db('login').collection('uitleningen');
+         const winkelmand= await coll.find({Naam:prodnaam}).toArray();
+        
+        console.log(winkelmand)
+        resp.status(200).send({
+            status:"succes",
+            data:winkelmand
+        }) 
+        
+    
+    }catch(error){
+        console.error(error.message);
+    
+    }finally{
+        await client.close();
+    }
+});
+
+
+app.post("/uitleen_display",async(req,resp)=>{
     try{  await client.connect()
-        let datareq= client.db('login').collection('uitleningen');
+        let datareq= client.db('login').collection('Schadelijst');
         let datareq2= await datareq.find({}).toArray();
         resp.status(200).send({
             status:'ok',
@@ -170,10 +206,11 @@ app.post("/uitleen",async(req,resp)=>{
   
 });
 
-app.post("/uitleen_display",async(req,resp)=>{
+app.get("/uitleen_displayy/:naam",async(req,resp)=>{
     try{  await client.connect()
+        const stunaam= req.params.naam;
         let datareq= client.db('login').collection('Schadelijst');
-        let datareq2= await datareq.find({}).toArray();
+        let datareq2= await datareq.find({naam:stunaam}).toArray();
         resp.status(200).send({
             status:'ok',
             data:{
@@ -206,6 +243,23 @@ app.post("/users",async(req,resp)=>{
         await client.close();
     }
 });
+app.get("/userss/:username",async(req,resp)=>{
+    try{
+        await client.connect()
+        const stunaam= req.params.username;
+        let Toestellen_Db=client.db('login').collection('users');
+        let Toestellen_Db_Data=await Toestellen_Db.find({Stunaam:stunaam}).toArray();
+
+        resp.status(200).send({
+            status:'ok',
+            data:Toestellen_Db_Data
+        });
+    }catch(error){
+
+    }finally{
+        await client.close();
+    }
+});
 
 app.post("/geschade_toestellen",async(req,resp)=>{
     try{
@@ -222,6 +276,24 @@ app.post("/geschade_toestellen",async(req,resp)=>{
     }finally{
         await client.close();
     }
+});
+
+    app.post("/geschade_toestellen/:stunaam",async(req,resp)=>{
+        try{
+            await client.connect()
+            const stunaam= req.params.stunaam;
+            let Toestellen_Db=client.db('login').collection('producten');
+            let Toestellen_Db_Data=await Toestellen_Db.find({model:stunaam}).toArray();
+    
+            resp.status(200).send({
+                status:'ok',
+                data:Toestellen_Db_Data
+            });
+        }catch(error){
+    
+        }finally{
+            await client.close();
+        }
 });
 app.post("/geschade_toestellenlist",async(req,resp)=>{
     let gegevens={ 
@@ -291,6 +363,24 @@ app.post("/blacklist",async(req,resp)=>{
         await client.close();
     }
 });
+
+app.get("/blacklist/:naam",async(req,resp)=>{
+    try{
+        await client.connect()
+        const stunaam= req.params.naam;
+        let Blacklist_db=client.db('login').collection('Blacklist');
+        let Blacklist_Db_Data=await Blacklist_db.find({stunaam:stunaam}).toArray();
+
+        resp.status(200).send({
+            status:'ok',
+            data:Blacklist_Db_Data
+        });
+    }catch(error){
+
+    }finally{
+        await client.close();
+    }
+});
 app.get("/Toestel_inleveren/:stunaam",async(req,resp)=>{
 try{
     await client.connect()
@@ -342,12 +432,47 @@ app.delete("/Toestel/:id", async (req, res) => {
     }
 });
 
-app.get(`/unavailable-dates/:prodid`, async (req, resp) => {
+app.delete("/blacklistDelete/:id", async (req, res) => {
     try {
         await client.connect();
-        const stunaam= req.params.stunaam;//
+        const id = req.params.id;
+        let Uitleningen_Db = client.db('login').collection('Blacklist');
+        let result = await Uitleningen_Db.deleteOne({ _id: new ObjectId(id) });
+    } catch (error) {
+        console.error(error);
+        res.status(500).send({
+            status: "error",
+            message: error.message
+        });
+    } finally {
+        await client.close();
+    }
+});
+app.delete("/SchadeDelete/:id", async (req, res) => {
+    try {
+        await client.connect();
+        const id = req.params.id;
+        let Uitleningen_Db = client.db('login').collection('Schadelijst');
+        let result = await Uitleningen_Db.deleteOne({ _id: new ObjectId(id) });
+    } catch (error) {
+        console.error(error);
+        res.status(500).send({
+            status: "error",
+            message: error.message
+        });
+    } finally {
+        await client.close();
+    }
+});
+
+
+
+app.get(`/unavailable-dates/:idToestel`, async (req, resp) => {
+    try {
+        await client.connect();
+        const stunaam= req.params.idToestel;//
         const KalenderData = client.db('login').collection('uitleningen');
-        const results = await KalenderData.find({id:stunaam}).toArray();
+        const results = await KalenderData.find({product_Id:stunaam}).toArray();
 
         resp.status(200).send(results);
     } catch (error) {

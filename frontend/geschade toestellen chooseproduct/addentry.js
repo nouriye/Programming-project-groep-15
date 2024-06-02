@@ -1,3 +1,19 @@
+document.getElementById('search').addEventListener('submit', async function(event){
+    event.preventDefault();
+
+    let searchTerm = document.getElementById('SearchTerm').value;
+    sessionStorage.setItem('searchTerm', searchTerm); // Sla de zoekterm op in sessionStorage
+
+    window.location.reload();
+});
+
+
+
+
+
+
+
+
 //pagina die toestellen ophaalt en displayed V=> select toestel => id van toestel ophalen v => pagina voor nieuwe entry v=>
     //stu id invullen in input veld V/ input veld voor schadeV/=> knop om aan database toe te voegen V 
 
@@ -7,10 +23,15 @@
         document.addEventListener('DOMContentLoaded', async function(){
             let counter =1;
             let counter2=0;
-        
+            let searchTerm = sessionStorage.getItem('searchTerm');
+           
+            if (!searchTerm) {
+                
+                return;
+            } 
             try{ 
         
-            await getData(`http://localhost:3000/geschade_toestellen`,'POST').then(data=>{
+            await getData(`http://localhost:3000/geschade_toestellen/${searchTerm}`,'POST').then(data=>{
                 let div1= document.getElementById('div1');
                 let div2= document.getElementById('div2');
                 let div3= document.getElementById('div3');
@@ -32,23 +53,23 @@
             
                     let listitem2= document.getElementById(counter.toString());
                     listitem2.textContent= `${item.model}`
-                    listitem2.addEventListener('click',()=>clickitem(item._id,div1))
+                    listitem2.addEventListener('click',()=>clickitem(item._id,item.model,div1))
                     counter++
             
                     let listitem3= document.getElementById(counter.toString());
                     listitem3.textContent= `${item.categorie}`
-                    listitem3.addEventListener('click',()=>clickitem(item._id,div1))
+                    listitem3.addEventListener('click',()=>clickitem(item._id,item.model,div1))
                     counter++    
                     counter2++
                     //2
                     let listitem4= document.getElementById(counter.toString());
                     listitem4.textContent= `${item.merk}`
-                    listitem4.addEventListener('click',()=>clickitem(item._id,div2))
+                    listitem4.addEventListener('click',()=>clickitem(item._id,item.model,div2))
                     counter++    
         
                     let listitem5= document.getElementById(counter.toString());
                     listitem5.textContent= `${item.model}`
-                    listitem5.addEventListener('click',()=>clickitem(item._idid,div2))
+                    listitem5.addEventListener('click',()=>clickitem(item._id,item.model,div2))
                     counter++
             
                     let listitem6= document.getElementById(counter.toString());
@@ -185,7 +206,7 @@
                     listitem30.textContent = `${item.categorie}`;
                     listitem30.addEventListener('click', () => clickitem(item._id, div10));
                     counter++;
-            
+                    
             })
             window.searchItems=searchItems;
         

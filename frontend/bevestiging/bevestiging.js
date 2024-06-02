@@ -6,5 +6,7 @@ function openBevestiging() {
 
 function closeBevestiging() {
     bevestiging.classList.remove("open-bevestiging");
+    sessionStorage.clear();
     window.location.href="../menu/menu.html"
+    
 }

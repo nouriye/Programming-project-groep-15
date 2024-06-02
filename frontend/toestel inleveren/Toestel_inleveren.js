@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded',function(event){
 
 
 
-
+    
     
 
     async function searchItems(event){
@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded',function(event){
         }
         let listitem5= document.getElementById(counter.toString());
         listitem5.textContent= `${item.sdatum}`
-        listitem5.addEventListener('click',()=>clickitem(item._idid,div1))
+        listitem5.addEventListener('click',()=>clickitem(item._id,div1))
         counter++
 
         let listitem6= document.getElementById(counter.toString());
@@ -307,7 +307,7 @@ document.addEventListener('DOMContentLoaded',function(event){
         listitem54.textContent = `${item.edatum}`;
         listitem54.addEventListener('click', () => clickitem(item._id, div9));
 
-        
+        console.log(item._id);
 
 
         /*let div3= document.getElementById('div3')
@@ -356,7 +356,7 @@ sessionStorage.clear();
         }else{
             console.error("failed")
         }
-    })
+    }) 
 }
 async function deleteData(url) {
     let options = {

@@ -32,8 +32,10 @@
             </div>
             <div class="nav">
                 <div class="seaech">
-                    <input type="text" placeholder="Search..">
-                    <button type="submit"><img src="BxSearchAlt (1).png " width="10px" alt=""></button>
+                    <form action="" onsubmit="searchItems(event)" id="search">
+                    <input type="text" placeholder="Search.." id="SearchTerm">
+                    <button  type="submit"><img src="BxSearchAlt (1).png " width="10px" alt=""></button>
+                    </form>
                 </div>
                 <div class="User">
                     <div class="img-case">
@@ -107,8 +109,8 @@
 
                 <thead>
                     <tr>
-                        <th scope="col" width="50px">ID</th>
-                        <th scope="col" width="100px">Naam</th>
+                        <th scope="col" width="50px">Naam</th>
+                        <th scope="col" width="100px">UserId</th>
                         <th scope="col" width="290px">ToestelNaam</th>
                         <th scope="col">Conditie</th>
                         <th scope="col">Uitleen-Datum</th>

@@ -15,6 +15,7 @@
     document.getElementById('Stud_ID').value=stuid;
     document.getElementById('mail').value=email;
     document.getElementById('naam').value=stunaam;
+    
     console.log(prodid);
 
  
@@ -44,7 +45,7 @@
         }catch{
             
         }finally{
-            
+            sessionStorage.clear();
         }
 
     });  

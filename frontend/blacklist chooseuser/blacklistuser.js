@@ -1,13 +1,37 @@
+document.getElementById('search').addEventListener('submit', async function(event){
+    event.preventDefault();
+
+    let searchTerm = document.getElementById('SearchTerm').value;
+    sessionStorage.setItem('searchTerm', searchTerm); // Sla de zoekterm op in sessionStorage
+
+    window.location.reload();
+});
+
+
+
+
+
+
+
+
+
 //pagina die blacklist ophaalt V => knop => pagina die gebruikers ophaalt V=> gebruiker selecteren v => id van gebruiker ophalen v => 
     //id van gebruiker invullen in inputveld V => inputveld maken voor reden=>
         document.addEventListener('DOMContentLoaded', async function(){
             //counter initialiseren
             let counter =1;
             let counter2=0;
+            let searchTerm = sessionStorage.getItem('searchTerm');
+            if (!searchTerm) {
+               
+                return
+                // Verwijder de zoekterm uit sessionStorage na gebruik
+             
+           }
         //let info= ['email','id','stunaam','reden'];
             try{ 
             //data van users ophalen 
-            await getData(`http://localhost:3000/users`,'POST').then(data=>{
+            await getData(`http://localhost:3000/userss/${searchTerm}`).then(data=>{
             //div initialiseren voor het weghalen van html listitem
             let div1= document.getElementById('div1');
             let div2= document.getElementById('div2');
@@ -19,7 +43,7 @@
             let div8 = document.getElementById('div8');
             let div9 = document.getElementById('div9');
             let div10 = document.getElementById('div10');
-            
+             
 
                 let item= data.data[counter2] 
          //new item
@@ -39,6 +63,7 @@
                 counter++    
                 counter2++
                 //2
+                
                 let listitem4= document.getElementById(counter.toString());
                 listitem4.textContent= `${item.id}`
                 listitem4.addEventListener('click',()=>clickitem(item._id,item.Stunaam,item.email,div2))
