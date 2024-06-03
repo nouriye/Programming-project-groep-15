@@ -1,12 +1,42 @@
-document.addEventListener('DOMContentLoaded',function(){
+document.getElementById('search').addEventListener('submit', async function(event){
+    event.preventDefault();
+
+    let searchTerm = document.getElementById('SearchTerm').value;
+    sessionStorage.setItem('searchTerm', searchTerm); // Sla de zoekterm op in sessionStorage
+
+    window.location.reload();
+});
+
+
+
+
+
+document.addEventListener('DOMContentLoaded',function(event){
+    
+    console.log('okay')
     let counter =1;
     let counter2=0;
+    let searchTerm = sessionStorage.getItem('searchTerm');
+    
+    if (searchTerm) {
+        
+         searchItems(event);
+         // Verwijder de zoekterm uit sessionStorage na gebruik
+      
+    }
+
+
+
+    
+    
 
     async function searchItems(event){
         event.preventDefault();
-        let prodname= document.getElementById('SearchTerm').value;
+
+        //let prodname= document.getElementById('SearchTerm').value;
+        let prodname = sessionStorage.getItem('searchTerm');
         console.log(prodname);
-    
+      
         try{ 
 
     await getData(`http://localhost:3000/Toestel_inleveren/${prodname}`,'GET').then(data=>{
@@ -25,29 +55,31 @@ document.addEventListener('DOMContentLoaded',function(){
         let item= data.data[counter2] 
 //item1
         let listitem1= document.getElementById(counter.toString());
-        listitem1.textContent= `${item.StuId}`
+        listitem1.textContent= `${item.Naam}`
         listitem1.addEventListener('click',()=>clickitem(item._id,div1))
         counter++;
 
         let listitem2= document.getElementById(counter.toString());
-        listitem2.textContent= `${item.Naam}`
+        listitem2.textContent= `${item.StuId}`
         listitem2.addEventListener('click',()=>clickitem(item._id,div1))
         counter++
 
         let listitem3= document.getElementById(counter.toString());
-        listitem3.textContent= `${item.product_Id}`
+        listitem3.textContent= `${item.Toestelnaam}`
         listitem3.addEventListener('click',()=>clickitem(item._id,div1))
         counter++    
         
         let listitem4= document.getElementById(counter.toString());
-        listitem4.textContent= `${item.Toestelnaam}`
+        listitem4.textContent= `${item.product_Id}`
         listitem4.addEventListener('click',()=>clickitem(item._id,div1))
         counter++    
-
-        
+//item 1
+        if (data.data.length === 1) {
+            return;
+        }
         let listitem5= document.getElementById(counter.toString());
         listitem5.textContent= `${item.sdatum}`
-        listitem5.addEventListener('click',()=>clickitem(item._idid,div1))
+        listitem5.addEventListener('click',()=>clickitem(item._id,div1))
         counter++
 
         let listitem6= document.getElementById(counter.toString());
@@ -59,19 +91,19 @@ document.addEventListener('DOMContentLoaded',function(){
          
         counter++ 
         let listitem7= document.getElementById(counter.toString());
-        listitem7.textContent= `${item.StuId}` 
-        listitem7.addEventListener('click',()=>clickitem(item2._id,div2))
+        listitem7.textContent= `${item.Naam}` 
+        listitem7.addEventListener('click',()=>clickitem(item._id,div2))
         counter++
         let listitem8= document.getElementById(counter.toString());
-        listitem8.textContent= `${item.Naam}` 
+        listitem8.textContent= `${item.StuId}` 
         listitem8.addEventListener('click',()=>clickitem(item._id,div2))
         counter++
         let listitem9= document.getElementById(counter.toString());
-        listitem9.textContent= `${item.product_Id}`
+        listitem9.textContent= `${item.Toestelnaam}`
         listitem9.addEventListener('click',()=>clickitem(item._id,div2))
         counter++
         let listitem10= document.getElementById(counter.toString());
-        listitem10.textContent= `${item.Toestelnaam}` 
+        listitem10.textContent= `${item.product_Id}` 
         listitem10.addEventListener('click',()=>clickitem(item._id,div2))
         counter++
         let listitem11= document.getElementById(counter.toString());
@@ -86,19 +118,19 @@ document.addEventListener('DOMContentLoaded',function(){
        //item3
         counter++ 
         let listitem13= document.getElementById(counter.toString());
-        listitem13.textContent= `${item.StuId}` 
+        listitem13.textContent= `${item.Naam}` 
         listitem13.addEventListener('click',()=>clickitem(item._id,div3))
         counter++
         let listitem14= document.getElementById(counter.toString());
-        listitem14.textContent= `${item.Naam}` 
+        listitem14.textContent= `${item.StuId}` 
         listitem14.addEventListener('click',()=>clickitem(item._id,div3))
         counter++
         let listitem15= document.getElementById(counter.toString());
-        listitem15.textContent= `${item.product_Id}`
+        listitem15.textContent= `${item.Toestelnaam}`
         listitem15.addEventListener('click',()=>clickitem(item._id,div3))
         counter++
         let listitem16= document.getElementById(counter.toString());
-        listitem16.textContent= `${item.Toestelnaam}` 
+        listitem16.textContent= `${item.product_Id}` 
         listitem16.addEventListener('click',()=>clickitem(item._id,div3))
         counter++
         let listitem17= document.getElementById(counter.toString());
@@ -275,7 +307,7 @@ document.addEventListener('DOMContentLoaded',function(){
         listitem54.textContent = `${item.edatum}`;
         listitem54.addEventListener('click', () => clickitem(item._id, div9));
 
-        
+        console.log(item._id);
 
 
         /*let div3= document.getElementById('div3')
@@ -300,20 +332,22 @@ document.addEventListener('DOMContentLoaded',function(){
 
 }
 }
-document.getElementById('search').addEventListener('submit', searchItems);
+sessionStorage.clear();
+//document.getElementById('search').addEventListener('submit', searchItems);
 }); 
 
-async function searchItems(event){
+/*async function searchItems(event){
     event.preventdefault();
     let prodname= document.getElementById('SearchTerm').value;
     console.log(prodname);
-}
+}*/
 
     function clickitem(itemid,listitem){
      console.log(itemid,listitem)
       let remove= listitem
       if(remove){
     remove.remove();
+    window.location.href="../bevestiging(inleveren)/geschbev.html"
       }else{
     console.error("not found")
     }
@@ -323,7 +357,7 @@ async function searchItems(event){
         }else{
             console.error("failed")
         }
-    })
+    }) 
 }
 async function deleteData(url) {
     let options = {

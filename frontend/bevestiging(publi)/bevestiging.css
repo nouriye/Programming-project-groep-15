@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('kisspng-erasmushogeschool-brussel-vrije-universiteit-bruss-chaps-5b337466156997.2017042315300987900877\ \(1\)\ copy\ 2.png') no-repeat center center/cover;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.content {
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 32px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 15px 40px;
+    background: #6fd649;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    border-radius: 30px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #5cbf3c;
+}
+
+.bevestiging {
+    width: 400px;
+    background: #fff;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    text-align: center;
+    padding: 20px;
+    color: #333;
+    visibility: hidden;
+    transition: transform 0.4s, visibility 0.4s;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.open-bevestiging {
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.bevestiging img {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.bevestiging h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.bevestiging p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.bevestiging button {
+    padding: 10px 20px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.bevestiging button:hover {
+    background: #0056b3;
+}

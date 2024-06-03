@@ -5,6 +5,7 @@ let email= sessionStorage.getItem('email');
 document.getElementById('prodid').value=prodid;
 document.getElementById('email').value=email;
 document.getElementById('stunaam').value=username
+
 console.log(prodid);
 
 
@@ -16,9 +17,10 @@ document.getElementById('ProdBut').addEventListener('submit',async function(even
    let stunaam= document.getElementById('email').value;
    let REDEN= document.getElementById('Schade').value;
   //let info= ['email','id','stunaam','reden'];
-    
+    sessionStorage.clear();
     console.log();
-
+    window.location.href = "../bevestiging(blacklist)/blacklistbev.html"; 
+   
     try{
     await getData(`http://localhost:3000/BlacklistADD`,'POST',{
         StuId:ID,
@@ -27,12 +29,14 @@ document.getElementById('ProdBut').addEventListener('submit',async function(even
         reden:REDEN
         
         });
+        window.location.href = "../bevestiging(blacklist)/blacklistbev.html"; 
 
     }catch{
         
     }finally{
         
     }
+    
 
 });  
 

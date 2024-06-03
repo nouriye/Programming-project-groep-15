@@ -31,8 +31,10 @@
             </div>
             <div class="nav">
                 <div class="search">
-                    <input type="text" placeholder="Search..">
-                    <button type="submit"><img src="BxSearchAlt (1).png" width="10px" alt="Search"></button>
+                    <form action="" id="search">
+                        <input id="SearchTerm" type="text" placeholder="Search.." onsubmit="Searchitems(event)">
+                        <button type="submit"><img src="BxSearchAlt (1).png " width="10px" alt=""></button>
+                        </form>
                 </div>
                 <div class="user">
                     <div class="img-case">
@@ -121,7 +123,7 @@
                     <td id="" data-label="Adres"></td>
                     <td id="4" data-label="TelNum">0467000123</td>
                     <td id="5" data-label="MailAdres">Yasmine@ehb.be</td>
-                    <td data-label="Actie"><a href="#"><img src="pen.png" alt="Edit" width="18px"><img src="delete.png"
+                    <td data-label="Actie"><a href="#"><img src="pen.png" alt="Edit" width="18px"><img src="delete.png" id="delete1"
                                 alt="Delete" width="18px"></a></td>
                     <td data-label="Conditie"></td>
                 </tr>

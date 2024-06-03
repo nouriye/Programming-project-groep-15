@@ -10,6 +10,7 @@ merk: productMerk,
 model: productModel,
 categorie: productCat
 }
+window.location.href="../bevestiging(publi)/geschbev.html"
     try{  
    await getData("http://localhost:3000/RegisterProduct",'POST',product).then(data=>{
     console.log(data);

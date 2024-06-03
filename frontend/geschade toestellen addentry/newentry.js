@@ -15,6 +15,7 @@
     document.getElementById('Stud_ID').value=stuid;
     document.getElementById('mail').value=email;
     document.getElementById('naam').value=stunaam;
+    
     console.log(prodid);
 
  
@@ -29,7 +30,7 @@
         let SCHADE= document.getElementById('Schade').value
         
         console.log(ID,STUID,SCHADE);
-
+        window.location.href = "../bevestiging(geschade)/geschbev.html"; 
         try{
         await getData(`http://localhost:3000/geschade_toestellenlist`,'POST',{
             prodid:ID,
@@ -44,7 +45,7 @@
         }catch{
             
         }finally{
-            
+            sessionStorage.clear();
         }
 
     });  

@@ -38,8 +38,10 @@
             </div>
             <div class="nav">
                 <div class="seaech">
-                    <input type="text" placeholder="Search..">
-                    <button type="submit"><img src="BxSearchAlt (1).png " width="10px" alt=""></button>
+                    <form action="" id="search">
+                        <input id="SearchTerm" type="text" placeholder="Search.." onsubmit="Searchitems(event)">
+                        <button type="submit"><img src="BxSearchAlt (1).png " width="10px" alt=""></button>
+                        </form>
                 </div>
                 <div class="User">
                     <div class="img-case">
@@ -127,7 +129,7 @@
                     <td data-label="Mail">Yasmine@ehb.be</td>
                     <td data-label="Conditie"><span class="switch"><input type="checkbox" id="switcher"><label
                                 for="switcher"></label></span></td>
-                    <td data-label="Icons"><a href="#"><img src="pen.png" alt="pen" width="18px"><img src="delete.png"
+                    <td data-label="Icons"><a href="#"><img src="pen.png" alt="pen" width="18px"><img id="delete1" src="delete.png"
                                 alt="delete" width="18px"></a></td>
 
                 </tr>
