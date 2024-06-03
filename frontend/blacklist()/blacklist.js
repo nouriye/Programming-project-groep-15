@@ -19,6 +19,7 @@ document.getElementById('search').addEventListener('submit', async function(even
 
 document.addEventListener('DOMContentLoaded',function(){
     let counter=1;
+    
     let searchTerm = sessionStorage.getItem('searchTerm');
     if (!searchTerm) {
        
@@ -63,7 +64,7 @@ document.addEventListener('DOMContentLoaded',function(){
            
        })
    }
-
+ 
    async function deleteData(url) {
     let options = {
         method: 'DELETE',
