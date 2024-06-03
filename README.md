@@ -48,9 +48,38 @@ Om te kunnen inloggen heb je uw EhB credentials nodig (meer info over hoe het te
 
 
 
+![image](https://github.com/nouriye/Programming-project-groep-15/assets/133105442/44a4cba4-8a61-49ed-9fd9-fda085085c6f)
+
+
+Hierna komt u op het "main menu" waar u de keuze heeft tussen de verschillende functionaliteiten die het programma te bieden heeft. 
 
 
 
+
+![image](https://github.com/nouriye/Programming-project-groep-15/assets/133105442/44a4cba4-8a61-49ed-9fd9-fda085085c6f)
+
+
+
+
+
+# Installatie 
+(make sure dat je nodemon en npm correct geinstalleerd zijn)
+1. Kopieer de repo naar de gewenste locatie op uw computer.
+   °git clone https://github.com/gebruikersnaam/projectnaam.git
+2. Navigeer naar de Directory in jouw terminal naar keuze.
+   °cd projectnaam
+3. Installeer de nodige dependencies
+   °npm install
+4. Navigeer naar de Backend folder
+   cd projectnaam backend.
+5. Start het project
+   °nodemon
+6.    
+       
+   
+    
+
+   
 
 
 
