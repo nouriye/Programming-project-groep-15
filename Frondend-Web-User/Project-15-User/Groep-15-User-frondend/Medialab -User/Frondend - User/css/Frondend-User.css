@@ -1,0 +1,387 @@
+:root {
+    --primary-color: #09096a;
+    --secondary-color: #6c757d;
+    --font-color: #343a40;
+    --light-color: #f8f9fa;
+    --white: #ffffff;
+    --black: #000000;
+}
+
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    border: none;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(130, 130, 130);
+    color: var(--font-color);
+    line-height: 1.6;
+}
+
+section {
+    padding: 5rem 9%;
+}
+
+.header {
+    background-color: var(--white);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+
+.header .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 2rem;
+}
+
+.header .logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.header .navbar a {
+    font-size: 1.6rem;
+    margin-left: 2rem;
+    color: var(--secondary-color);
+    transition: .2s;
+}
+
+.header .navbar a:hover {
+    color: var(--primary-color);
+}
+
+.header .icons div {
+    font-size: 2rem;
+    margin-left: 2rem;
+    cursor: pointer;
+    color: var(--secondary-color);
+}
+
+.search-form,
+.shopping-cart,
+.login-form {
+    display: none;
+    position: relative;
+    top: 100%;
+    right: 2rem;
+    background-color: var(--white);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    padding: 2rem;
+    z-index: 1001;
+}
+
+.search-form.active,
+.shopping-cart.active,
+.login-form.active {
+    display: block;
+}
+
+.search-form input {
+    width: 100%;
+    padding: 1rem;
+    margin-top: 1rem;
+    background-color: var(--light-color);
+    border: .1rem solid var(--secondary-color);
+    border-radius: .5rem;
+}
+
+.shopping-cart .box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.shopping-cart .box img {
+    width: 5rem;
+}
+
+.shopping-cart .box .content {
+    margin-left: 1rem;
+}
+
+.shopping-cart .box .content h3 {
+    font-size: 1.5rem;
+    color: var(--font-color);
+}
+
+.shopping-cart .total {
+    font-size: 2rem;
+    color: var(--font-color);
+    margin-top: 1rem;
+}
+
+.login-form h3 {
+    font-size: 2.2rem;
+    color: var(--font-color);
+}
+
+.login-form input {
+    width: 100%;
+    padding: 1rem;
+    margin: 1rem 0;
+    background-color: var(--light-color);
+    border: .1rem solid var(--secondary-color);
+    border-radius: .5rem;
+}
+
+.login-form .btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.login-form .btn:hover {
+    background-color: var(--secondary-color);
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+    background: url('../image/alexandre-debieve-2.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 70vh;
+}
+
+.home .content {
+    max-width: 60rem;
+}
+
+.home .content h3 {
+    font-size: 5rem;
+    color: var(--white);
+    text-transform: uppercase;
+}
+
+.home .content p {
+    font-size: 1.6rem;
+    color: var(--white);
+    margin: 1rem 0;
+}
+
+.home .content .btn {
+    padding: 1rem 2rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.home .content .btn:hover {
+    background-color: var(--secondary-color);
+}
+
+.features .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.features .heading {
+    font-size: 3.2rem;
+    color: var(--black);
+    margin-bottom: 2rem;
+}
+
+.products .heading {
+    font-size: 3.2rem;
+    color: var(--black);
+    margin-bottom: 2rem;
+
+}
+
+.categories .heading {
+    font-size: 3.2rem;
+    color: var(--black);
+    margin-bottom: 2rem;
+}
+
+.features .box {
+    flex: 1 1 30rem;
+    padding: 2rem;
+    background-color: var(--white);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+    text-align: center;
+}
+
+.features .box img {
+    width: 100%;
+    border-radius: .5rem;
+}
+
+.features .box h3 {
+    font-size: 2.2rem;
+    color: var(--font-color);
+    margin: 1rem 0;
+}
+
+.features .box p {
+    font-size: 1.6rem;
+    color: var(--secondary-color);
+    margin: 1rem 0;
+}
+
+.products .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.products .box {
+    flex: 1 1 30rem;
+    padding: 2rem;
+    background-color: var(--white);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+    text-align: center;
+}
+
+.products .box img {
+    width: 100%;
+    border-radius: .5rem;
+}
+
+.products .box h3 {
+    font-size: 2.2rem;
+    color: var(--font-color);
+    margin: 1rem 0;
+}
+
+.products .box .stars {
+    margin: 1rem 0;
+}
+
+.products .box .stars i {
+    font-size: 1.6rem;
+    color: var(--primary-color);
+}
+
+.products .box .btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.products .box .btn:hover {
+    background-color: var(--secondary-color);
+}
+
+.products-items {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.categories .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.categories .box {
+    flex: 1 1 30rem;
+    padding: 2rem;
+    background-color: var(--white);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+    text-align: center;
+}
+
+.categories .box img {
+    width: 100%;
+    border-radius: .5rem;
+}
+
+.categories .box h3 {
+    font-size: 2.2rem;
+    color: var(--font-color);
+    margin: 1rem 0;
+}
+
+.categories .box p {
+    font-size: 1.6rem;
+    color: var(--secondary-color);
+    margin: 1rem 0;
+}
+
+.categories .box .btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.categories .box .btn:hover {
+    background-color: var(--secondary-color);
+}
+
+
+
+.footer .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2rem;
+}
+
+.footer .box {
+    flex: 1 1 30rem;
+}
+
+.footer .box h3 {
+    font-size: 3.2rem;
+    color: black;
+    margin-bottom: 1rem;
+}
+
+.footer .box a {
+    display: block;
+    font-size: 1.6rem;
+    color: white;
+    margin: .5rem 0;
+    transition: .2s;
+}
+
+.footer .box a:hover {
+    color: var(--primary-color);
+}
+
+.footer .box i {
+    margin-right: .5rem;
+    color: var(--primary-color);
+}
+
+.footer .credit {
+    text-align: center;
+    font-size: 1.6rem;
+    color: rgb(251, 242, 224);
+    margin-top: 2rem;
+}
