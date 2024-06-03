@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>admin panal uitleen</title>
+    <title>Blacklist-pagina</title>
     <link rel="stylesheet" href="Blacklist.css">
     <link rel="stylesheet" href="https://www.flaticon.com/free-icons/delete">
 
@@ -41,7 +41,7 @@
                     <form action="" id="search">
                         <input id="SearchTerm" type="text" placeholder="Search.." onsubmit="Searchitems(event)">
                         <button type="submit"><img src="BxSearchAlt (1).png " width="10px" alt=""></button>
-                        </form>
+                    </form>
                 </div>
                 <div class="User">
                     <div class="img-case">
@@ -71,36 +71,52 @@
             </div>
             <div class="content-4">
                 <div class="cards">
-                    <div class="card">
-                        <div class="t-i">
-                            <h3> Toestel inleveren</h3>
+                    <a
+                        href="/Frondend-Web/Project-15-Admin/Groep-15-Admin-frondend/Inleveren-Toestellen/inleveren-toestellen.html">
+                        <div class="card">
+                            <div class="t-i">
+                                <h3> Toestel inleveren</h3>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card">
-                        <div class="t-i">
-                            <h3> Uitgeleende Toestel</h3>
+                    </a>
+                    <a
+                        href="/Frondend-Web/Project-15-Admin/Groep-15-Admin-frondend/Uitgeleende-Toestellen/uitgeleende-Toestellen.html">
+                        <div class="card">
+                            <div class="t-i">
+                                <h3> Uitgeleende Toestel</h3>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card">
-                        <div class="t-i">
-                            <h3> Toestel Uitlenen</h3>
+                    </a>
+                    <a
+                        href="/Frondend-Web/Project-15-Admin/Groep-15-Admin-frondend/Geleen-Toestellen/Geleen-toestel.html">
+                        <div class="card">
+                            <div class="t-i">
+                                <h3> Toestel Uitlenen</h3>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card">
-                        <div class="t-i">
-                            <h3>Geschade Toestellen</h3>
+                    </a>
+                    <a
+                        href="/Frondend-Web/Project-15-Admin/Groep-15-Admin-frondend/Geschade-toestel/geschade-toestel.html">
+                        <div class="card">
+                            <div class="t-i">
+                                <h3>Geschade Toestellen</h3>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card">
-                        <div class="t-i">
-                            <h3> Blacklist</h3>
+                    </a>
+                    <a href="/Frondend-Web/Project-15-Admin/Groep-15-Admin-frondend/blacklist/Blacklist.html">
+                        <div class="card">
+                            <div class="t-i">
+                                <h3> Blacklist Gegevens</h3>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card">
-                        <div class="t-i">
-                            <h3> Toestel Publiceren</h3>
+                    </a>
+                    <a href="/Frondend-Web/Project-15-Admin/Groep-15-Admin-frondend/Toestellen-Pub/Toestellen-pub.html">
+                        <div class="card">
+                            <div class="t-i">
+                                <h3> Toestel Publiceren</h3>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -109,154 +125,132 @@
 
             <thead>
                 <tr>
-                    <th scope="col">Email</th>
-                    <th scope="col">ID</th>
-                    <th scope="col">Naam</th>
-                    <th scope="col">reden</th>
-                    <th scope="col"></th>
-                    <th scope="col"></th>
+                    <th scope="col">ID-Klant</th>
+                    <th scope="col">KlantNaam</th>
+                    <th scope="col">Code-Post</th>
+                    <th scope="col">Adres</th>
+                    <th scope="col">TelNum</th>
+                    <th scope="col">MailAdres</th>
                     <th scope="col">Stoppen</th>
                     <th scope="col">Actie</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td id="1" data-label="Number">1234</td>
-                    <td id="2" data-label="text">Yasmine </td>
-                    <td id="3" data-label="Amount">1000/Bx</td>
-                    <td id="4" data-label="text"> Stestraat 70</td>
-                    <td data-label="Number">0467000123</td>
-                    <td data-label="Mail">Yasmine@ehb.be</td>
-                    <td data-label="Conditie"><span class="switch"><input type="checkbox" id="switcher"><label
-                                for="switcher"></label></span></td>
-                    <td data-label="Icons"><a href="#"><img src="pen.png" alt="pen" width="18px"><img id="delete1" src="delete.png"
+                <tr class="active-tr">
+                    <td data-label="Number"></td>
+                    <td data-label="text"></td>
+                    <td data-label="Amount"></td>
+                    <td data-label="text"> </td>
+                    <td data-label="Number"></td>
+                    <td data-label="Mail"></td>
+                    <td data-label="Conditie"><span class="switch"><label for="switcher"></label></span></td>
+                    <td data-label="Icons"><a href="#"><img src="pen.png" alt="pen" width="18px"><img src="delete.png"
                                 alt="delete" width="18px"></a></td>
-
                 </tr>
 
                 <tr class="active-tr">
-                    <td id="5" data-label="Number">1235</td>
-                    <td id="6" data-label="text">Sekou Cisse </td>
-                    <td id="7" data-label="Amount">1080/Bx</td>
-                    <td id="8" data-label="text"> Stestraat 10</td>
-                    <td data-label="Number">0467000125</td>
-                    <td data-label="Mail">sekou.cisse@ehb.be</td>
-                    <td data-label="Conditie"><span class="switch"><input type="checkbox" id="switcher"><label
-                                for="switcher"></label></span></td>
+                    <td data-label="Number"></td>
+                    <td data-label="text"></td>
+                    <td data-label="Amount"></td>
+                    <td data-label="text"> </td>
+                    <td data-label="Number"></td>
+                    <td data-label="Mail"></td>
+                    <td data-label="Conditie"><span class="switch"><label for="switcher"></label></span></td>
                     <td data-label="Icons"><a href="#"><img src="pen.png" alt="pen" width="18px"><img src="delete.png"
                                 alt="delete" width="18px"></a></td>
                 </tr>
-                <tr>
-                    <td id="9" data-label="Number">1236</td>
-                    <td id="10" data-label="text">Youmes </td>
-                    <td id="11" data-label="Amount">1070/Bx</td>
-                    <td id="12"  data-label="text"> Stestraat 07</td>
-                    <td data-label="Number">0467000126</td>
-                    <td data-label="Mail">Youmes@ehb.be</td>
-                    <td data-label="Conditie"><span class="switch"><input type="checkbox" id="switcher"><label
-                                for="switcher"></label></span></td>
+                <tr class="active-tr">
+                    <td data-label="Number"></td>
+                    <td data-label="text"></td>
+                    <td data-label="Amount"></td>
+                    <td data-label="text"> </td>
+                    <td data-label="Number"></td>
+                    <td data-label="Mail"></td>
+                    <td data-label="Conditie"><span class="switch"><label for="switcher"></label></span></td>
                     <td data-label="Icons"><a href="#"><img src="pen.png" alt="pen" width="18px"><img src="delete.png"
                                 alt="delete" width="18px"></a></td>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td id="13" data-label="Number">1237</td>
-                    <td id="14" data-label="text">Stephanie </td>
-                    <td id="15" data-label="Amount">1060/Bx</td>
-                    <td id="16" data-label="text"> Stestraat 15</td>
-                    <td data-label="Number">0467000127</td>
-                    <td data-label="Mail">Stephanie@ehb.be</td>
-                    <td data-label="Conditie"><span class="switch"><input type="checkbox" id="switcher"><label
-                                for="switcher"></label></span></td>
-                    <td data-label="Icons"><a href="#"><img src="pen.png" alt="pen" width="18px"><img src="delete.png"
-                                alt="delete" width="18px"></a></td>
-                    </td>
-                </tr>
-                <tr> 
-                    <td id="17" data-label="Number">1238</td>
-                    <td id="18" data-label="text">Nina termans</td>
-                    <td id="19" data-label="Amount">1000/Bx</td>
-                    <td id="20" data-label="text"> Stestraat 77</td>
-                    <td data-label="Number">0467000128</td>
-                    <td data-label="Mail">Nina.termans@ehb.be</td>
-                    <td data-label="Conditie"><span class="switch"><input type="checkbox" id="switcher"><label
-                                for="switcher"></label></span></td>
-                    <td data-label="Icons"><a href="#"><img src="pen.png" alt="pen" width="18px"><img src="delete.png"
-                                alt="delete" width="18px"></a></td>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td id="21" data-label="Number">1239</td>
-                    <td id="22" data-label="text">Milana love </td>
-                    <td id="23" data-label="Amount">1020/Bx</td>
-                    <td id="24" data-label="text"> Stestraat 20</td>
-                    <td data-label="Number">0467000129</td>
-                    <td data-label="Mail">Milana.love@ehb.be</td>
-                    <td data-label="Conditie"><span class="switch"><input type="checkbox" id="switcher"><label
-                                for="switcher"></label></span></td>
-                    <td data-label="Icons"><a href="#"><img src="pen.png" alt="pen" width="18px"><img src="delete.png"
-                                alt="delete" width="18px"></a></td>
-                    </td>
-                </tr>
-                <tr>
-                    <td id="25" data-label="Number">1240</td>
-                    <td id="26" data-label="text">Tom Termans</td>
-                    <td id="27" data-label="Amount">1030/Bx</td>
-                    <td id="28" data-label="text"> Stestraat 03</td>
-                    <td data-label="Number">0467000123</td>
-                    <td data-label="Mail">tom.termans@ehb.be</td>
-                    <td data-label="Conditie"><span class="switch"><input type="checkbox" id="switcher"><label
-                                for="switcher"></label></span></td>
-                    <td data-label="Icons"><a href="#"><img src="pen.png" alt="pen" width="18px"><img src="delete.png"
-                                alt="delete" width="18px"></a></td>
-
-                    </td>
                 </tr>
 
                 <tr class="active-tr">
-                    <td id="29" data-label="Number">1241</td>
-                    <td id="30" data-label="text">Pol Arnaud</td>
-                    <td id="31" data-label="Amount">1020/Bx</td>
-                    <td id="32" data-label="text"> Stestraat 90</td>
-                    <td data-label="Number">0467000123</td>
-                    <td data-label="Mail">pol.arnaud@ehb.be</td>
-                    <td data-label="Conditie"><span class="switch"><input type="checkbox" id="switcher"><label
-                                for="switcher"></label></span></td>
+                    <td data-label="Number"></td>
+                    <td data-label="text"></td>
+                    <td data-label="Amount"></td>
+                    <td data-label="text"> </td>
+                    <td data-label="Number"></td>
+                    <td data-label="Mail"></td>
+                    <td data-label="Conditie"><span class="switch"><label for="switcher"></label></span></td>
                     <td data-label="Icons"><a href="#"><img src="pen.png" alt="pen" width="18px"><img src="delete.png"
                                 alt="delete" width="18px"></a></td>
-                    </td>
                 </tr>
-                <tr>
-                    <td id="33" data-label="Number">1242</td>
-                    <td id="34" data-label="text">Douraz by</td>
-                    <td id="35" data-label="Amount">3000/lv</td>
-                    <td id="36" data-label="text"> koestraat 20</td>
-                    <td data-label="Number">0467000123</td>
-                    <td data-label="Mail">bouraz.by@ehb.be</td>
-                    <td data-label="Conditie"><span class="switch"><input type="checkbox" id="switcher"><label
-                                for="switcher"></label></span></td>
+                <tr class="active-tr">
+                    <td data-label="Number"></td>
+                    <td data-label="text"></td>
+                    <td data-label="Amount"></td>
+                    <td data-label="text"> </td>
+                    <td data-label="Number"></td>
+                    <td data-label="Mail"></td>
+                    <td data-label="Conditie"><span class="switch"><label for="switcher"></label></span></td>
                     <td data-label="Icons"><a href="#"><img src="pen.png" alt="pen" width="18px"><img src="delete.png"
                                 alt="delete" width="18px"></a></td>
-                    </td>
                 </tr>
-                <tr>
-                    <td id="37" data-label="ID-Klant">1243</td>
-                    <td id="38" data-label="KlantNaam">Stef Arnaud</td>
-                    <td id="39" data-label="Code-Post">3000/Lv</td>
-                    <td id="40" data-label="Adres">Stestraat 70</td>
-                    <td data-label="TelNum">0467000123</td>
-                    <td data-label="MailAdres">stef.arnauds@ehb.be</td>
-                    <td data-label="Conditie"><span class="switch"><input type="checkbox" id="switcher"><label
-                                for="switcher"></label></span></td>
-                    <td data-label="Actie"><a href="#"><img src="pen.png" alt="Edit" width="18px"><img src="delete.png"
-                                alt="Delete" width="18px"></a></td>
-                    </td>
+                <tr class="active-tr">
+                    <td data-label="Number"></td>
+                    <td data-label="text"></td>
+                    <td data-label="Amount"></td>
+                    <td data-label="text"> </td>
+                    <td data-label="Number"></td>
+                    <td data-label="Mail"></td>
+                    <td data-label="Conditie"><span class="switch"><label for="switcher"></label></span></td>
+                    <td data-label="Icons"><a href="#"><img src="pen.png" alt="pen" width="18px"><img src="delete.png"
+                                alt="delete" width="18px"></a></td>
+                </tr>
+                <tr class="active-tr">
+                    <td data-label="Number"></td>
+                    <td data-label="text"></td>
+                    <td data-label="Amount"></td>
+                    <td data-label="text"> </td>
+                    <td data-label="Number"></td>
+                    <td data-label="Mail"></td>
+                    <td data-label="Conditie"><span class="switch"><label for="switcher"></label></span></td>
+                    <td data-label="Icons"><a href="#"><img src="pen.png" alt="pen" width="18px"><img src="delete.png"
+                                alt="delete" width="18px"></a></td>
+                </tr>
+
+                <tr class="active-tr">
+                    <td data-label="Number"></td>
+                    <td data-label="text"></td>
+                    <td data-label="Amount"></td>
+                    <td data-label="text"> </td>
+                    <td data-label="Number"></td>
+                    <td data-label="Mail"></td>
+                    <td data-label="Conditie"><span class="switch"><label for="switcher"></label></span></td>
+                    <td data-label="Icons"><a href="#"><img src="pen.png" alt="pen" width="18px"><img src="delete.png"
+                                alt="delete" width="18px"></a></td>
+                </tr>
+                <tr class="active-tr">
+                    <td data-label="Number"></td>
+                    <td data-label="text"></td>
+                    <td data-label="Amount"></td>
+                    <td data-label="text"> </td>
+                    <td data-label="Number"></td>
+                    <td data-label="Mail"></td>
+                    <td data-label="Conditie"><span class="switch"><label for="switcher"></label></span></td>
+                    <td data-label="Icons"><a href="#"><img src="pen.png" alt="pen" width="18px"><img src="delete.png"
+                                alt="delete" width="18px"></a></td>
+                </tr>
+                <tr class="active-tr">
+                    <td data-label="Number"></td>
+                    <td data-label="text"></td>
+                    <td data-label="Amount"></td>
+                    <td data-label="text"> </td>
+                    <td data-label="Number"></td>
+                    <td data-label="Mail"></td>
+                    <td data-label="Conditie"><span class="switch"><label for="switcher"></label></span></td>
+                    <td data-label="Icons"><a href="#"><img src="pen.png" alt="pen" width="18px"><img src="delete.png"
+                                alt="delete" width="18px"></a></td>
                 </tr>
             </tbody>
         </table> <br>
-        <button id="blacklistadd" class="btn" type="submit">Add new Blacklist</button>
+        <button class="btn" type="submit">Add new Blacklist</button>
     </div>
 </body>
-<script src="blacklist.js"></script> 
