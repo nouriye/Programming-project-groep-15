@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 
 <head>
     <meta charset="UTF-8">
@@ -9,7 +9,6 @@
 </head>
 
 <body>
-
     <div class="side-menu">
         <div class="brand-name">
             <h1>Admin.</h1>
@@ -99,7 +98,7 @@
                     <a href="/Frondend-Web/Project-15-Admin/Groep-15-Admin-frondend/blacklist/Blacklist.html">
                         <div class="card">
                             <div class="t-i">
-                                <h3> Blacklist</h3>
+                                <h3> Blacklist Gegevens</h3>
                             </div>
                         </div>
                     </a>
@@ -121,30 +120,24 @@
         <div class="services-container">
             <h3> Toestellen-Publiceren</h3><br>
             <hr>
-
-
             <div class="services-box">
-
-                <form id="ProdBut" action="post" type="submit">
+                <form id="registratieFormulier" action="post">
                     <div class="input-box">
                         <label for="text">type:</label>
-                        <input type="text" id="1" name="type">
+                        <input type="text" id="type" name="type">
                     </div>
                     <div class="input-box">
                         <label for="text">Model:</label>
-                        <input type="model" id="2" name="model">
+                        <input type="model1" id="model1" name="model1">
                     </div>
                     <div class="input-box">
 
                         <label for="text">Merk:</label>
-                        <input type="text" id="3" name="model">
+                        <input type="text" id="model2" name="model2">
                     </div>
                     <div id="errors"></div>
                     <button type="submit">Add Nieuw Pub</button>
                 </form>
-
             </div>
         </div>
-        <script src="toestel publiceren.js"></script>
 </body>
-

@@ -21,7 +21,8 @@
             <li><img src="BxBxsBarChartAlt2.png" alt="" width="25px">&nbsp;Filles</li>
             <li><img src="BxBxsCog.png" alt="" width="25px">&nbsp; Setting</li>
         </ul>
-        <a href="#" class="btn">Add new</a>
+        <br><br>
+        <button class="btn-1" type="submit">Logout</button>
     </div>
     <div class="container">
         <div class="header">
@@ -33,9 +34,10 @@
             <div class="nav">
                 <div class="seaech">
                     <form action="" onsubmit="searchItems(event)" id="search">
-                    <input type="text" id="SearchTerm" placeholder="Search..">
-                    <button type="submit" > button </button><img src="BxSearchAlt (1).png " width="10px" alt=""></button>
-                   </form>
+                        <input type="text" id="SearchTerm" placeholder="Search..">
+                        <button type="submit"> button </button><img src="BxSearchAlt (1).png " width="10px"
+                            alt=""></button>
+                    </form>
                 </div>
                 <div class="User">
                     <div class="img-case">
@@ -65,38 +67,53 @@
             </div>
             <div class="content-4">
                 <div class="cards">
-                    <div class="card">
-                        <div class="t-i">
-                            <h3> Toestel inleveren</h3>
+                    <a
+                        href="/Frondend-Web/Project-15-Admin/Groep-15-Admin-frondend/Inleveren-Toestellen/inleveren-toestellen.html">
+                        <div class="card">
+                            <div class="t-i">
+                                <h3> Toestel inleveren</h3>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card">
-                        <div class="t-i">
-                            <h3> Uitgeleende Toestel</h3>
+                    </a>
+                    <a
+                        href="/Frondend-Web/Project-15-Admin/Groep-15-Admin-frondend/Uitgeleende-Toestellen/uitgeleende-Toestellen.html">
+                        <div class="card">
+                            <div class="t-i">
+                                <h3> Uitgeleende Toestel</h3>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card">
-                        <div class="t-i">
-                            <h3> Toestel Uitlenen</h3>
+                    </a>
+                    <a
+                        href="/Frondend-Web/Project-15-Admin/Groep-15-Admin-frondend/Geleen-Toestellen/Geleen-toestel.html">
+                        <div class="card">
+                            <div class="t-i">
+                                <h3> Toestel Uitlenen</h3>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card">
-                        <div class="t-i">
-                            <h3>Geschade Toestellen</h3>
+                    </a>
+                    <a
+                        href="/Frondend-Web/Project-15-Admin/Groep-15-Admin-frondend/Geschade-toestel/geschade-toestel.html">
+                        <div class="card">
+                            <div class="t-i">
+                                <h3>Geschade Toestellen</h3>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card">
-                        <div class="t-i">
-                            <h3> Blacklist</h3>
+                    </a>
+                    <a href="/Frondend-Web/Project-15-Admin/Groep-15-Admin-frondend/blacklist/Blacklist.html">
+                        <div class="card">
+                            <div class="t-i">
+                                <h3> Blacklist Gegevens</h3>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card">
-                        <div class="t-i">
-                            <h3> Toestel Publiceren</h3>
+                    </a>
+                    <a href="/Frondend-Web/Project-15-Admin/Groep-15-Admin-frondend/Toestellen-Pub/Toestellen-pub.html">
+                        <div class="card">
+                            <div class="t-i">
+                                <h3> Toestel Publiceren</h3>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
-
             </div>
             <br>
             <hr>
@@ -112,133 +129,154 @@
                         <th scope="col" width="50px">ID-Tstl</th>
                         <th scope="col"></th>
                         <th scope="col" width="100px">Merk</th>
-                        <th scope="col" width="290px">model</th>
-                        <th scope="col">categorie</th>
+                        <th scope="col" width="290px">T-Versie</th>
+                        <th scope="col">SerieNum</th>
                         <th scope="col"></th>
+
                         <th scope="col">Beschikbaarheid</th>
+
 
 
 
                     </tr>
                 </thead>
-                <tbody id="tableBody">
+                <tbody>
                     <tr>
-                        <td id="1" data-label="Account">EHB-001</td>
-                        <td  data-label="Account"></td>
-                        <td id="2" data-label="Amount">3D-Printer</td>
-                        <td id="3" data-label="text"> PHILIPS</td>
-                        <td id="4" data-label="Period">B34D87462024</td>
-                        <td  data-label="Period"></td>
-                        <td id="een" data-label="Number"><a href="#">Check-beschikbaarheid</a></td>
+                        <td data-label="Account">EHB-001</td>
+                        <td data-label="Account"></td>
+                        <td data-label="Amount">3D-Printer</td>
+                        <td data-label="text"> PHILIPS</td>
+                        <td data-label="Period">B34D87462024</td>
+                        <td data-label="Period"></td>
+
+                        <td data-label="Number"><a
+                                href="/Frondend-Web/Project-15-Admin/Groep-15-Admin-frondend/kalander/Admin-kalander.html">Check-beschikbaarheid</a>
+                        </td>
 
 
-                    </tr>
 
-                    <tr class="active-tr">
-                        <td id="5" data-label="Account">EHB-0014</td>
-                        <td data-label="Account"></td>
-                        <td id="6" data-label="Amount">3D-Printer</td>
-                        <td id="7" data-label="text"> PHILIPS</td>
-                        <td id="8" data-label="Period">B34D87462024</td>
-                        <td data-label="Period"></td>
-                        <td id="twee" data-label="Number"><a href="#">Check-beschikbaarheid</a></td>
-                    </tr>
-                    <tr>
-                        <td id="9" data-label="Account">EHB-002</td>
-                        <td data-label="Account"></td>
-                        <td id="10" data-label="Amount">3D-Printer</td>
-                        <td id="11" data-label="text"> PHILIPS</td>
-                        <td id="12" data-label="Period">B34D87462024</td>
-                        <td data-label="Period"></td>
-                        <td data-label="Number"><a href="#">Check-beschikbaarheid</a></td>
-                        </td>
-                    </tr>
- 
-                    <tr>
-                        <td id="13" data-label="Account">EHB-003</td>
-                        <td  data-label="Account"></td>
-                        <td id="14" data-label="Amount">3D-Printer</td>
-                        <td id="15" data-label="text"> PHILIPS</td>
-                        <td id="16" data-label="Period">B34D87462024</td>
-                        <td data-label="Period"></td>
-                        <td data-label="Number"><a href="#">Check-beschikbaarheid</a></td>
-                        </td>
-                    </tr>
-                    <tr> 
-                        <td id="17" data-label="Account">EHB-004</td>
-                        <td data-label="Account"></td>
-                        <td id="18" data-label="Amount">3D-Printer</td>
-                        <td id="19" data-label="text"> PHILIPS</td>
-                        <td id="20" data-label="Period">B34D87462024</td>
-                        <td data-label="Period"></td>
-                        <td data-label="Number"><a href="#">Check-beschikbaarheid</a></td>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td id="21" data-label="Account">EHB-005</td>
-                        <td data-label="Account"></td>
-                        <td id="22" data-label="Amount">3D-Printer</td>
-                        <td id="23" data-label="text"> PHILIPS</td>
-                        <td id="24" data-label="Period">B34D87462024</td>
-                        <td data-label="Period"></td>
-                        <td data-label="Number"><a href="#">Check-beschikbaarheid</a></td>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td id="25" data-label="Account">EHB-006</td>
-                        <td data-label="Account"></td>
-                        <td id="26" data-label="Amount">3D-Printer</td>
-                        <td id="27" data-label="text"> PHILIPS</td>
-                        <td id="28" data-label="Period">B34D87462024</td>
-                        <td data-label="Period"></td>
-                        <td data-label="Number"><a href="#">Check-beschikbaarheid</a></td>
-
-                        </td>
                     </tr>
 
                     <tr class="active-tr">
-                        <td id="29" data-label="Account">EHB-007</td>
-                        <td  data-label="Account"></td>
-                        <td id="30" data-label="Amount">3D-Printer</td>
-                        <td id="31" data-label="text"> PHILIPS</td>
-                        <td id="32" data-label="Period">B34D87462024</td>
-                        <td data-label="Period"></td>
-                        <td data-label="Number"><a href="#">Check-beschikbaarheid</a></td>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td id="33" data-label="Account">EHB-007</td>
+                        <td data-label="Account">EHB-0014</td>
                         <td data-label="Account"></td>
-                        <td id="34" data-label="Amount">3D-Printer</td>
-                        <td id="35" data-label="text"> PHILIPS</td>
-                        <td id="36" data-label="Period">B34D87462024</td>
+                        <td data-label="Amount">3D-Printer</td>
+                        <td data-label="text"> PHILIPS</td>
+                        <td data-label="Period">B34D87462024</td>
                         <td data-label="Period"></td>
-                        <td data-label="Number"><a href="#">Check-beschikbaarheid</a></td>
+                        <td data-label="Number"><a
+                                href="/Frondend-Web/Project-15-Admin/Groep-15-Admin-frondend/kalander/Admin-kalander.html">Check-beschikbaarheid</a>
                         </td>
                     </tr>
                     <tr>
-                        <td id="37" data-label="Account">EHB-007</td>
-                        <td  data-label="Account"></td>
-                        <td id="38" data-label="Amount">3D-Printer</td>
-                        <td id="39" data-label="text"> PHILIPS</td>
-                        <td id="40" data-label="Period">B34D87462024</td>
+                        <td data-label="Account">EHB-002</td>
+                        <td data-label="Account"></td>
+                        <td data-label="Amount">3D-Printer</td>
+                        <td data-label="text"> PHILIPS</td>
+                        <td data-label="Period">B34D87462024</td>
                         <td data-label="Period"></td>
-                        <td data-label="Number"><a href="#">Check-beschikbaarheid</a></td>
+                        <td data-label="Number"><a
+                                href="/Frondend-Web/Project-15-Admin/Groep-15-Admin-frondend/kalander/Admin-kalander.html">Check-beschikbaarheid</a>
+                        </td>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td data-label="Account">EHB-003</td>
+                        <td data-label="Account"></td>
+                        <td data-label="Amount">3D-Printer</td>
+                        <td data-label="text"> PHILIPS</td>
+                        <td data-label="Period">B34D87462024</td>
+                        <td data-label="Period"></td>
+                        <td data-label="Number"><a
+                                href="/Frondend-Web/Project-15-Admin/Groep-15-Admin-frondend/kalander/Admin-kalander.html">Check-beschikbaarheid</a>
+                        </td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="Account">EHB-004</td>
+                        <td data-label="Account"></td>
+                        <td data-label="Amount">3D-Printer</td>
+                        <td data-label="text"> PHILIPS</td>
+                        <td data-label="Period">B34D87462024</td>
+                        <td data-label="Period"></td>
+                        <td data-label="Number"><a
+                                href="/Frondend-Web/Project-15-Admin/Groep-15-Admin-frondend/kalander/Admin-kalander.html">Check-beschikbaarheid</a>
+                        </td>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td data-label="Account">EHB-005</td>
+                        <td data-label="Account"></td>
+                        <td data-label="Amount">3D-Printer</td>
+                        <td data-label="text"> PHILIPS</td>
+                        <td data-label="Period">B34D87462024</td>
+                        <td data-label="Period"></td>
+                        <td data-label="Number"><a
+                                href="/Frondend-Web/Project-15-Admin/Groep-15-Admin-frondend/kalander/Admin-kalander.html">Check-beschikbaarheid</a>
+                        </td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="Account">EHB-006</td>
+                        <td data-label="Account"></td>
+                        <td data-label="Amount">3D-Printer</td>
+                        <td data-label="text"> PHILIPS</td>
+                        <td data-label="Period">B34D87462024</td>
+                        <td data-label="Period"></td>
+                        <td data-label="Number"><a
+                                href="/Frondend-Web/Project-15-Admin/Groep-15-Admin-frondend/kalander/Admin-kalander.html">Check-beschikbaarheid</a>
+                        </td>
+
+                        </td>
+                    </tr>
+
+                    <tr class="active-tr">
+                        <td data-label="Account">EHB-007</td>
+                        <td data-label="Account"></td>
+                        <td data-label="Amount">3D-Printer</td>
+                        <td data-label="text"> PHILIPS</td>
+                        <td data-label="Period">B34D87462024</td>
+                        <td data-label="Period"></td>
+                        <td data-label="Number"><a
+                                href="/Frondend-Web/Project-15-Admin/Groep-15-Admin-frondend/kalander/Admin-kalander.html">Check-beschikbaarheid</a>
+                        </td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="Account">EHB-007</td>
+                        <td data-label="Account"></td>
+                        <td data-label="Amount">3D-Printer</td>
+                        <td data-label="text"> PHILIPS</td>
+                        <td data-label="Period">B34D87462024</td>
+                        <td data-label="Period"></td>
+                        <td data-label="Number"><a
+                                href="/Frondend-Web/Project-15-Admin/Groep-15-Admin-frondend/kalander/Admin-kalander.html">Check-beschikbaarheid</a>
+                        </td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="Account">EHB-007</td>
+                        <td data-label="Account"></td>
+                        <td data-label="Amount">3D-Printer</td>
+                        <td data-label="text"> PHILIPS</td>
+                        <td data-label="Period">B34D87462024</td>
+                        <td data-label="Period"></td>
+                        <td data-label="Number"><a
+                                href="/Frondend-Web/Project-15-Admin/Groep-15-Admin-frondend/kalander/Admin-kalander.html">Check-beschikbaarheid</a>
+                        </td>
                         </td>
                     </tr>
                 </tbody>
-            </table> <br>
-            <br>
-            <hr>
-            <div class="eind-pagina">
-                <a href="#">Acceptabel gebruiksbegeleids</a>
+            </table><br>
+            <button class="btn-1" type="submit">Add new</button>
 
-            </div>
+
+
 
 
 
         </div>
     </div>
 </body>
-<script src="toestel_uitlenen.js"></script>

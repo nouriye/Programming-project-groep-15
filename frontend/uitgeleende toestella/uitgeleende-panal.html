@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>admin panal</title>
+    <title>Uitgeleende-toestellen</title>
     <link rel="stylesheet" href="uitgeleende-panal.css">
 </head>
 
@@ -21,7 +21,8 @@
             <li><img src="BxBxsBarChartAlt2.png" alt="" width="25px">&nbsp;Filles</li>
             <li><img src="BxBxsCog.png" alt="" width="25px">&nbsp; Setting</li>
         </ul>
-        <a href="#" class="btn">Add new</a>
+        <br><br>
+        <button class="btn-1" type="submit">Add new</button>
     </div>
     <div class="container">
         <div class="header">
@@ -63,41 +64,54 @@
                     </div>
                 </div>
             </div>
-
             <div class="content-4">
                 <div class="cards">
-                    <a href="/frontend/toestel inleveren/Toestel-Inleveren.html">
+                    <a
+                        href="/Frondend-Web/Project-15-Admin/Groep-15-Admin-frondend/Inleveren-Toestellen/inleveren-toestellen.html">
                         <div class="card">
                             <div class="t-i">
                                 <h3> Toestel inleveren</h3>
                             </div>
                         </div>
                     </a>
-                    <div class="card">
-                        <div class="t-i">
-                            <h3> Uitgeleende Toestel</h3>
+                    <a
+                        href="/Frondend-Web/Project-15-Admin/Groep-15-Admin-frondend/Uitgeleende-Toestellen/uitgeleende-Toestellen.html">
+                        <div class="card">
+                            <div class="t-i">
+                                <h3> Uitgeleende Toestel</h3>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card">
-                        <div class="t-i">
-                            <h3> Toestel Uitlenen</h3>
+                    </a>
+                    <a
+                        href="/Frondend-Web/Project-15-Admin/Groep-15-Admin-frondend/Geleen-Toestellen/Geleen-toestel.html">
+                        <div class="card">
+                            <div class="t-i">
+                                <h3> Toestel Uitlenen</h3>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card">
-                        <div class="t-i">
-                            <h3>Geschade Toestellen</h3>
+                    </a>
+                    <a
+                        href="/Frondend-Web/Project-15-Admin/Groep-15-Admin-frondend/Geschade-toestel/geschade-toestel.html">
+                        <div class="card">
+                            <div class="t-i">
+                                <h3>Geschade Toestellen</h3>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card">
-                        <div class="t-i">
-                            <h3> Blacklist</h3>
+                    </a>
+                    <a href="/Frondend-Web/Project-15-Admin/Groep-15-Admin-frondend/blacklist/Blacklist.html">
+                        <div class="card">
+                            <div class="t-i">
+                                <h3> Blacklist Gegevens</h3>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card">
-                        <div class="t-i">
-                            <h3> Toestel Publiceren</h3>
+                    </a>
+                    <a href="/Frondend-Web/Project-15-Admin/Groep-15-Admin-frondend/Toestellen-Pub/Toestellen-pub.html">
+                        <div class="card">
+                            <div class="t-i">
+                                <h3> Toestel Publiceren</h3>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
 
             </div>
@@ -112,9 +126,9 @@
 
                 <thead>
                     <tr>
-                        <th scope="col" width="50px">Naam</th>
-                        <th scope="col" width="100px">UserId</th>
-                        <th scope="col" width="290px">ToestelNaam</th>
+                        <th scope="col">ID</th>
+                        <th scope="col">Naam</th>
+                        <th scope="col">ToestelNaam</th>
                         <th scope="col">Conditie</th>
                         <th scope="col">Uitleen-Datum</th>
                         <th scope="col"></th>
@@ -124,108 +138,124 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td id="1" data-label="Account">#1234</td>
-                        <td id="2" data-label="text"> Sekou cisse</td>
-                        <td id="3" data-label="Amount">3D-Printer</td>
-                        <td data-label="text"> Goed</td>
-                        <td id="4" data-label="Period">03/05/2024</td>
+                        <td data-label="Account"></td>
+                        <td data-label="text"> </td>
+                        <td data-label="Amount"></td>
+                        <td data-label="text"> </td>
+                        <td data-label="Period"></td>
                         <td data-label="Period"><i class="fa fa-gear ticon"></i>
-                        <td id="5" data-label="Terug-Date">03/01/2024</td>
+                        <td data-label="Terug-Date"></td>
 
                         </td>
                     </tr>
 
                     <tr class="active-tr">
-                        <td id="6" data-label="Account">#3412</td>
-                        <td id="7" data-label="text">Yasmine</td>
-                        <td id="8" data-label="text">Youngnuo led-light</td>
-                        <td data-label="text"> Goed</td>
-                        <td id="9" data-label="Period">14/01/2024</td>
+                        <td data-label="Account"></td>
+                        <td data-label="text"></td>
+                        <td data-label="text"></td>
+                        <td data-label="text"> </td>
+                        <td data-label="Period"></td>
                         <td data-label="Period"><i class="fa fa-gear ticon"></i>
-                        <td id="10" data-label="Terug-Date">03/01/2024</td>
+                        <td data-label="Terug-Date"></td>
                         </td>
                     </tr>
                     <tr>
-                        <td id="11" data-label="Account">#1234</td>
-
-                        <td id="12" data-label="text"> Stef Arnauds</td>
-                        <td id="13" data-label="Amount">3D-Printer</td>
-                        <td data-label="text"> Goed</td>
-                        <td id="14" data-label="Period">14/05/2024</td>
+                        <td data-label="Account"></td>
+                        <td data-label="text"> </td>
+                        <td data-label="Amount"></td>
+                        <td data-label="text"></td>
+                        <td data-label="Period"></td>
                         <td data-label="Period"><i class="fa fa-gear ticon"></i>
-                        <td id="15" data-label="Terug-Date">13/05/2024</td>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td id="16" data-label="Account">#1234</td>
-
-                        <td id="17" data-label="text"> Sekou cisse</td>
-                        <td id="18" data-label="Amount">3D-Printer</td>
-                        <td data-label="text"> Goed</td>
-                        <td id="19" data-label="Period">15/05/2022</td>
-                        <td data-label="Period"><i class="fa fa-gear ticon"></i>
-                        <td id="20" data-label="Terug-Date">03/01/2022</td>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td id="21" data-label="Account">#3412</td>
-                        <td id="22" data-label="text"> Nina Termans</td>
-                        <td id="23" data-label="Amount">3D-Printer</td>
-                        <td data-label="text"> Goed</td>
-                        <td id="24" data-label="Period">15/05/2024</td>
-                        <td data-label="Period"><i class="fa fa-gear ticon"></i>
-                        <td id="25" data-label="Terug-Date">15/05/2024</td>
+                        <td data-label="Terug-Date"></td>
                         </td>
                     </tr>
 
                     <tr>
-                        <td id="26" data-label="Account">#3412</td>
-                        <td id="27" data-label="text"> Oumar cisse</td>
-                        <td id="28" data-label="Amount">3D-Printer</td>
-                        <td data-label="text"> Goed</td>
-                        <td id="29" data-label="Period">03/01/2022</td>
+                        <td data-label="Account"></td>
+
+                        <td data-label="text"> </td>
+                        <td data-label="Amount"></td>
+                        <td data-label="text"></td>
+                        <td data-label="Period"></td>
                         <td data-label="Period"><i class="fa fa-gear ticon"></i>
-                        <td id="30" data-label="Terug-Date">15/05/2024</td>
+                        <td data-label="Terug-Date"></td>
                         </td>
                     </tr>
                     <tr>
-                        <td id="31" data-label="Account">#1234</td>
-                        <td id="32" data-label="text"> Sekou cisse</td>
-                        <td id="33" data-label="Amount">3D-Printer</td>
-                        <td data-label="text"> Goed</td>
-                        <td id="34" data-label="Period">03/01/2024</td>
+                        <td data-label="Account"></td>
+                        <td data-label="text"> </td>
+                        <td data-label="Amount"></td>
+                        <td data-label="text"></td>
+                        <td data-label="Period"></td>
                         <td data-label="Period"><i class="fa fa-gear ticon"></i>
-                        <td id="35" data-label="Terug-Date">15/05/2024</td>
-
+                        <td data-label="Terug-Date"></td>
                         </td>
                     </tr>
 
+                    <tr>
+                        <td data-label="Account"></td>
+                        <td data-label="text"> </td>
+                        <td data-label="Amount"></td>
+                        <td data-label="text"> </td>
+                        <td data-label="Period"></td>
+                        <td data-label="Period"><i class="fa fa-gear ticon"></i>
+                        <td data-label="Terug-Date"></td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="Account"></td>
+                        <td data-label="text"> </td>
+                        <td data-label="Amount"></td>
+                        <td data-label="text"> </td>
+                        <td data-label="Period"></td>
+                        <td data-label="Period"><i class="fa fa-gear ticon"></i>
+                        <td data-label="Terug-Date"></td>
+                        </td>
+                    </tr>
                     <tr class="active-tr">
-                        <td id="36" data-label="Account">#3412</td>
-                        <td id="37" data-label="text">Yasmine</td>
-                        <td id="38" data-label="text">Youngnuo led-light</td>
-                        <td data-label="text"> Goed</td>
-                        <td id="39" data-label="Period">03/01/2024</td>
+                        <td data-label="Account"></td>
+                        <td data-label="text"></td>
+                        <td data-label="text"></td>
+                        <td data-label="text"> </td>
+                        <td data-label="Period"></td>
                         <td data-label="Period"><i class="fa fa-gear ticon"></i>
-                        <td id="40" data-label="Terug-Date">15/05/2024</td>
+                        <td data-label="Terug-Date"></td>
                         </td>
                     </tr>
                     <tr>
-                        <td id="41" data-label="Account">#1234</td>
-
-                        <td id="42" data-label="text"> Stef Arnauds</td>
-                        <td id="43" data-label="Amount">3D-Printer</td>
-                        <td data-label="text"> Goed</td>
-                        <td id="44" data-label="Period">15/05/2024</td>
+                        <td data-label="Account"></td>
+                        <td data-label="text"> </td>
+                        <td data-label="Amount"></td>
+                        <td data-label="text"> </td>
+                        <td data-label="Period"></td>
                         <td data-label="Period"><i class="fa fa-gear ticon"></i>
-                        <td id="45" data-label="Terug-Date">15/05/2024</td>
+                        <td data-label="Terug-Date"></td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="Account"></td>
+                        <td data-label="text"> </td>
+                        <td data-label="Amount"></td>
+                        <td data-label="text"></td>
+                        <td data-label="Period"></td>
+                        <td data-label="Period"><i class="fa fa-gear ticon"></i>
+                        <td data-label="Terug-Date"></td>
+                        </td>
+                    </tr>
+                    <tr class="active-tr">
+                        <td data-label="Account"></td>
+                        <td data-label="text"></td>
+                        <td data-label="text"></td>
+                        <td data-label="text"> </td>
+                        <td data-label="Period"></td>
+                        <td data-label="Period"><i class="fa fa-gear ticon"></i>
+                        <td data-label="Terug-Date"></td>
                         </td>
                     </tr>
                 </tbody>
-            </table>
+            </table><br>
+            <button class="btn-1" type="submit">Add new</button>
         </div>
-    </div>
 
+    </div>
 </body>
-<script src="uitleen.js"></script>

@@ -17,9 +17,10 @@ li {
     list-style: none;
 }
 
+
 h1,
 h2 {
-    color: #57aa04d8;
+    color: #084ad9d8;
 }
 
 .btn {
@@ -27,14 +28,11 @@ h2 {
     color: white;
     padding: 3px 8px;
     text-align: center;
-
-
-
 }
 
 .btn:hover {
-    background: white;
-    color: rgb(45, 13, 110);
+    background: rgb(148, 146, 146);
+    color: #f1f1f1;
     padding: 3px 8px;
     border: 2px solid #6d6da4;
 }
@@ -56,7 +54,6 @@ h2 {
     align-items: center;
     justify-content: center;
     padding: 10px 0px 10px 100px;
-
 }
 
 .side-menu ul {
@@ -68,9 +65,7 @@ h2 {
     padding: 20px 25px;
     display: flex;
     align-items: center;
-
 }
-
 
 .side-menu ul li:hover {
     background: white;
@@ -78,12 +73,11 @@ h2 {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-
 .container {
     position: absolute;
     right: 0;
     width: 78.5vw;
-    height: 200%;
+    height: 100vh;
     background: #f1f1f1;
 }
 
@@ -99,7 +93,6 @@ h2 {
     height: 10vh;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     padding: 0 20px;
-
 }
 
 .container .header .logo {
@@ -107,14 +100,18 @@ h2 {
     align-items: center;
 }
 
-.container .header .logo img h2 {
+.container .header .logo img {
     width: 50px;
     height: 80px;
 }
 
+.container .header .logo h2 {
+    width: 50px;
+    height: 30px;
+}
+
 
 .container .header .nav {
-
     display: flex;
     align-items: center;
 }
@@ -122,8 +119,6 @@ h2 {
 .container .header .nav .search {
     margin-right: 20px;
 }
-
-
 
 .container .header .nav .search input[type="text"] {
     border: none;
@@ -133,7 +128,7 @@ h2 {
 }
 
 .container .header .nav .search button {
-    width: 40PX;
+    width: 40px;
     height: 40px;
     border: none;
     display: flex;
@@ -142,17 +137,14 @@ h2 {
 }
 
 .container .header .nav .search button img {
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
 }
-
-
 
 .container .header .nav .user {
     display: flex;
     align-items: center;
 }
-
 
 .container .header .nav .user .img-case {
     width: 50px;
@@ -164,7 +156,7 @@ h2 {
 
 .container .header .nav .user .img-case img {
     width: 100%;
-    width: 100%;
+    height: 100%;
 }
 
 .content {
@@ -172,31 +164,20 @@ h2 {
     padding: 20px;
 }
 
+
 .content .content-2 {
-    background-image: url(possessed-photography-jIBMSMs4_kA-unsplash.jpg);
+    background-image: url('possessed-photography-jIBMSMs4_kA-unsplash.jpg');
     background-size: cover;
     height: 150px;
-    width: 57rem;
-
-
-}
-
-.content .content-2 .panal .bp .bp-1 {
-    margin-top: 20px;
-    position: relative;
-    transform: translateX(-50%);
-
 }
 
 .content-4 .cards {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 5px;
-
 }
 
 .cards {
-
     padding: 10px 0;
     display: grid;
 }
@@ -211,7 +192,7 @@ h2 {
 }
 
 .card h3 {
-    margin: 5px 5px 5px 5px;
+    margin: 5px 0;
 }
 
 .cards .card:hover {
@@ -221,10 +202,36 @@ h2 {
     color: rgb(10, 10, 10);
 }
 
-p {
-    color: red;
-    font-size: 20px;
-    font-weight: bold;
+.hicon:nth-child(1):after {
+    content: '';
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    background: rgb(0, 255, 60);
+    border-radius: 10px;
+    left: 13px;
+    top: 7px;
+    transform: scale(0.5);
+    box-shadow: 0 0 0 0 rgb(82, 255, 114);
+    animation: pulse-red 2s infinite;
+    cursor: pointer;
+}
+
+@keyframes pulse-red {
+    0% {
+        transform: scale(0.85);
+        box-shadow: 0 0 0 0 rgba(148, 242, 7, 0.7);
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 25px rgba(255, 82, 82, 0);
+    }
+
+    100% {
+        transform: scale(0.85);
+        box-shadow: 0 0 0 0 rgba(255, 82, 82, 0);
+    }
 }
 
 table {
@@ -234,42 +241,133 @@ table {
     width: 100%;
     table-layout: fixed;
     border-spacing: 0 15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 table tr {
-    background-color: #d7d7d7;
-    border: 1px solid #9e9c9c !important;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd !important;
     padding: .20em;
     margin-bottom: 2px;
 }
 
-
 table th,
 table td {
-    padding: 0.7em;
+    padding: 0.5em;
     text-align: center;
-
 }
 
 table th {
+    margin: 2px;
     font-size: 10px;
-
-    letter-spacing: 0.1em;
+    letter-spacing: .1em;
     text-transform: uppercase;
-}
-
-th {
-    font-weight: 30px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: #50508a;
-    margin: 10px 10px 10px 10px;
+    background-color: #1d2146;
     color: white;
-
 }
 
-.a {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: black;
-    font-size: 20px;
+.pe,
+.de {
+    content: '';
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    background: rgb(149, 255, 0);
+    border-radius: 10px;
+    left: 10px;
+    top: 37px;
+    transform: scale(0.5);
+    box-shadow: 0 0 0 0 rgba(255, 82, 82, 1);
+    animation: pulse-red 2s infinite;
+    cursor: pointer;
+}
+
+.de {
+    background: green;
+    animation: pulse-green 2s infinite;
+}
+
+@keyframes pulse-green {
+    0% {
+        transform: scale(0.85);
+        box-shadow: 0 0 0 0 rgba(82, 255, 82, 0.7);
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 25px rgba(82, 255, 82, 0);
+    }
+
+    100% {
+        transform: scale(0.85);
+        box-shadow: 0 0 0 0 rgba(82, 255, 82, 0);
+    }
+}
+
+.klop {
+    background: rgb(247, 247, 247);
+    height: 20px;
+    width: 90px;
+    position: absolute;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 2px 2px 8px #4444;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.label1,
+.label2 {
+    display: block;
+    width: 40px;
+    height: 50px;
+    background: linear-gradient(to bottom, white 0, white 45px, #2c2c2c 45px, #2c2c2c 90px);
+    position: absolute;
+    top: 0;
+    color: #2c2c2c;
+    transition: 0.5s;
+}
+
+.label2 {
+    right: 0;
+}
+
+span {
+    display: flex;
+    width: 40px;
+    height: 10px;
+    justify-content: center;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 12px;
     font-weight: bold;
+}
+
+input:checked+.label1,
+input:checked+.label2 {
+    background: black;
+    color: white;
+    transition: 0.6s;
+}
+
+.btn-1 {
+    background: #3a3a63;
+    color: white;
+    padding: 3px 8px;
+    text-align: center;
+}
+
+.btn-1:hover {
+    background: rgb(148, 146, 146);
+    color: #f1f1f1;
+    padding: 3px 8px;
+    border: 2px solid #6d6da4;
+}
+
+.container .btn-1 {
+
+    display: flex;
+    align-items: end;
 }

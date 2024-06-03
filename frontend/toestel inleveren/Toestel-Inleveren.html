@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>admin panal</title>
-    <link rel="stylesheet" href="uitgeleende-panal.css">
+    <title>Toestellen-Inleveren</title>
+    <link rel="stylesheet" href="Toestel-Inleveren.css">
 </head>
 
 <body>
@@ -21,7 +21,8 @@
             <li><img src="BxBxsBarChartAlt2.png" alt="" width="25px">&nbsp;Filles</li>
             <li><img src="BxBxsCog.png" alt="" width="25px">&nbsp; Setting</li>
         </ul>
-        <a href="#" class="btn">Add new</a>
+        <br><br>
+        <a href="#" class="btn">Logout</a>
     </div>
     <div class="container">
         <div class="header">
@@ -33,9 +34,9 @@
             <div class="nav">
                 <div class="seaech">
                     <form action="" id="search">
-                    <input id="SearchTerm" type="text" placeholder="Search.." onsubmit="Searchitems(event)">
-                    <button type="submit"><img src="BxSearchAlt (1).png " width="10px" alt=""></button>
-                </form>
+                        <input id="SearchTerm" type="text" placeholder="Search.." onsubmit="Searchitems(event)">
+                        <button type="submit"><img src="BxSearchAlt (1).png " width="10px" alt=""></button>
+                    </form>
                 </div>
                 <div class="User">
                     <div class="img-case">
@@ -65,147 +66,248 @@
             </div>
             <div class="content-4">
                 <div class="cards">
-                    <div class="card">
-                        <div class="t-i">
-                            <h3> Toestel inleveren</h3>
+                    <a
+                        href='/Frondend-Web/Project-15-Admin/Groep-15-Admin-frondend/Inleveren-Toestellen/inleveren-toestellen.html'>
+                        <div class="card">
+                            <div class="t-i">
+                                <h3> Toestel inleveren</h3>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card">
-                        <div class="t-i">
-                            <h3> Uitgeleende Toestel</h3>
+                    </a>
+                    <a
+                        href="/Frondend-Web/Project-15-Admin/Groep-15-Admin-frondend/Uitgeleende-Toestellen/uitgeleende-Toestellen.html">
+                        <div class="card">
+                            <div class="t-i">
+                                <h3> Uitgeleende Toestel</h3>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card">
-                        <div class="t-i">
-                            <h3> Toestel Uitlenen</h3>
+                    </a>
+                    <a
+                        href="/Frondend-Web/Project-15-Admin/Groep-15-Admin-frondend/Geleen-Toestellen/Geleen-toestel.html">
+                        <div class="card">
+                            <div class="t-i">
+                                <h3> Toestel Uitlenen</h3>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card">
-                        <div class="t-i">
-                            <h3>Geschade Toestellen</h3>
+                    </a>
+                    <a
+                        href="/Frondend-Web/Project-15-Admin/Groep-15-Admin-frondend/Geschade-toestel/geschade-toestel.html">
+                        <div class="card">
+                            <div class="t-i">
+                                <h3>Geschade Toestellen</h3>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card">
-                        <div class="t-i">
-                            <h3> Blacklist</h3>
+                    </a>
+                    <a href="/Frondend-Web/Project-15-Admin/Groep-15-Admin-frondend/blacklist/Blacklist.html">
+                        <div class="card">
+                            <div class="t-i">
+                                <h3> Blacklist Gegevens</h3>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card">
-                        <div class="t-i">
-                            <h3> Toestel Publiceren</h3>
+                    </a>
+                    <a
+                        href="/Frondend-Web/Project-15-Admin/Groep-15-Admin-frondend/Uitgeleende-Toestellen/uitgeleende-Toestellen.html">
+                        <div class="card">
+                            <div class="t-i">
+                                <h3> Toestel Publiceren</h3>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
-
             </div>
-            <br>
-            <hr>
-
-
-            <br>
-
-
-            <table>
-
-                <thead>
-                    <tr>
-                        <th scope="col" width="50px">Stu_ID</th>
-                        <th scope="col" width="100px">Stu_Naam</th>
-                        <th scope="col" width="290px">ToestelID</th>
-                        <th scope="col">Toestelnaam</th>
-                        <th scope="col">Uitleen-Datum</th>
-                        <th scope="col"></th>
-                        <th scope="col">T/M-Datim</th>
-
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr id="div1">
-                        <td id="1" data-label="Account">#1234</td>
-                        <td id="2" data-label="text">Sekou Cisse</td>
-                        <td id="3" data-label="Amount">3D-Printer</td>
-                        <td id="4" data-label="text">Goed</td>
-                        <td id="5" data-label="Period">03/05/2024</td>
-                        <td data-label="Period"><i class="fa fa-gear ticon"></i></td>
-                        <td id="6" data-label="Terug-Date">03/01/2024</td>
-                    </tr>
-                    <tr class="active-tr" id="div2">
-                        <td id="7" data-label="Account">#3412</td>
-                        <td id="8" data-label="text">Yasmine</td>
-                        <td id="9" data-label="text">Youngnuo led-light</td>
-                        <td id="10" data-label="text">Goed</td>
-                        <td id="11" data-label="Period">14/01/2024</td>
-                        <td data-label="Period"><i class="fa fa-gear ticon"></i></td>
-                        <td id="12" data-label="Terug-Date">03/01/2024</td>
-                    </tr>
-                    <tr id="div3">
-                        <td id="13" data-label="Account">#1234</td>
-                        <td id="14" data-label="text">Stef Arnauds</td>
-                        <td id="15" data-label="Amount">3D-Printer</td>
-                        <td id="16" data-label="text">Goed</td>
-                        <td id="17" data-label="Period">14/05/2024</td>
-                        <td data-label="Period"><i class="fa fa-gear ticon"></i></td>
-                        <td id="18" data-label="Terug-Date">13/05/2024</td>
-                    </tr>
-                    <tr id="div4">
-                        <td id="19" data-label="Account">#1234</td>
-                        <td id="20" data-label="text">Sekou Cisse</td>
-                        <td id="21" data-label="Amount">3D-Printer</td>
-                        <td id="22" data-label="text">Goed</td>
-                        <td id="23" data-label="Period">15/05/2022</td>
-                        <td data-label="Period"><i class="fa fa-gear ticon"></i></td>
-                        <td id="24" data-label="Terug-Date">03/01/2022</td>
-                    </tr>
-                    <tr id="div5">
-                        <td id="25" data-label="Account">#3412</td>
-                        <td id="26" data-label="text">Nina Termans</td>
-                        <td id="27" data-label="Amount">3D-Printer</td>
-                        <td id="28" data-label="text">Goed</td>
-                        <td id="29" data-label="Period">15/05/2024</td>
-                        <td data-label="Period"><i class="fa fa-gear ticon"></i></td>
-                        <td id="30" data-label="Terug-Date">15/05/2024</td>
-                    </tr>
-                    <tr id="div6">
-                        <td id="31" data-label="Account">#3412</td>
-                        <td id="32" data-label="text">Oumar Cisse</td>
-                        <td id="33" data-label="Amount">3D-Printer</td>
-                        <td id="34" data-label="text">Goed</td>
-                        <td id="35" data-label="Period">03/01/2022</td>
-                        <td data-label="Period"><i class="fa fa-gear ticon"></i></td>
-                        <td id="36" data-label="Terug-Date">15/05/2024</td>
-                    </tr>
-                    <tr id="div7">
-                        <td id="37" data-label="Account">#1234</td>
-                        <td id="38" data-label="text">Sekou Cisse</td>
-                        <td id="39" data-label="Amount">3D-Printer</td>
-                        <td id="40" data-label="text">Goed</td>
-                        <td id="41" data-label="Period">03/01/2024</td>
-                        <td data-label="Period"><i class="fa fa-gear ticon"></i></td>
-                        <td id="42" data-label="Terug-Date">15/05/2024</td>
-                    </tr>
-                    <tr class="active-tr" id="div8">
-                        <td id="43" data-label="Account">#3412</td>
-                        <td id="44" data-label="text">Yasmine</td>
-                        <td id="45" data-label="text">Youngnuo led-light</td>
-                        <td id="46" data-label="text">Goed</td>
-                        <td id="47" data-label="Period">03/01/2024</td>
-                        <td data-label="Period"><i class="fa fa-gear ticon"></i></td>
-                        <td id="48" data-label="Terug-Date">15/05/2024</td>
-                    </tr>
-                    <tr id="div9">
-                        <td id="49" data-label="Account">#1234</td>
-                        <td id="50" data-label="text">Stef Arnauds</td>
-                        <td id="51" data-label="Amount">3D-Printer</td>
-                        <td id="52" data-label="text">Goed</td>
-                        <td id="53" data-label="Period">15/05/2024</td>
-                        <td data-label="Period"><i class="fa fa-gear ticon"></i></td>
-                        <td id="54" data-label="Terug-Date">15/05/2024</td>
-                    </tr>
-                </tbody>
-                
-            </table>
         </div>
+        <hr>
+        <br>
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col" width="50px">ID-Student</th>
+                    <th scope="col"></th>
+                    <th scope="col" width="100px">Std-Naam</th>
+                    <th scope="col">Uitlenen-Toestellen</th>
+                    <th scope="col">Uitleen-Date</th>
+                    <th scope="col">Terug-Datum</th>
+                    <th scope="col">Toestel-Conditie</th>
+                    <th scope="col">Gebracht</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="Account">#0001</td>
+                    <td data-label=""></td>
+                    <td data-label="Due Date">Sekou Cisse</td>
+                    <td data-label="Amount">3D-Printer</td>
+                    <td data-label="Period">03/01/2022</td>
+                    <td data-label="Terug-Date">03/01/2022</td>
+                    <td data-label="Amount" style="position: relative;"><span class="pe"></span>Goed</td>
+                    <td data-label="Period">
+                        <div class="klop">
+                            <input type="radio" id="yes" name="option" class="option">
+                            <label for="yes" class="label1"><span>YA</span></label>
+                            <input type="radio" id="no" name="option" class="option">
+                            <label for="no" class="label2"><span>NEE</span></label>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr class="active-tr">
+                    <td data-label="Account">#0002</td>
+                    <td data-label=""></td>
+                    <td data-label="Due Date">SAOUDI Yasmine</td>
+                    <td data-label="Amount">3D-Printer</td>
+                    <td data-label="Period">03/01/2022</td>
+                    <td data-label="Terug-Date">03/01/2022</td>
+                    <td data-label="Amount" style="position: relative;"><span class="pe"></span>Goed</td>
+                    <td data-label="Period">
+                        <div class="klop">
+                            <input type="radio" id="yes2" name="option2" class="option">
+                            <label for="yes2" class="label1"><span>YA</span></label>
+                            <input type="radio" id="no2" name="option2" class="option">
+                            <label for="no2" class="label2"><span>NEE</span></label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td data-label="Account">#0003</td>
+                    <td data-label=""></td>
+                    <td data-label="Due Date">VAN IMPE Stef</td>
+                    <td data-label="Amount">3D-Printer</td>
+                    <td data-label="Period">03/01/2022</td>
+                    <td data-label="Terug-Date">03/01/2022</td>
+                    <td data-label="Amount" style="position: relative;"><span class="pe"></span>Goed</td>
+                    <td data-label="Period">
+                        <div class="klop">
+                            <input type="radio" id="yes" name="option" class="option">
+                            <label for="yes" class="label1"><span>YA</span></label>
+                            <input type="radio" id="no" name="option" class="option">
+                            <label for="no" class="label2"><span>NEE</span></label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td data-label="Account">#0004</td>
+                    <td data-label=""></td>
+                    <td data-label="Due Date">BOUCHIHA Younes</td>
+                    <td data-label="Amount">3D-Printer</td>
+                    <td data-label="Period">03/01/2022</td>
+                    <td data-label="Terug-Date">03/01/2022</td>
+                    <td data-label="Amount" style="position: relative;"><span class="pe"></span>Goed</td>
+                    <td data-label="Period">
+                        <div class="klop">
+                            <input type="radio" id="yes" name="option" class="option">
+                            <label for="yes" class="label1"><span>YA</span></label>
+                            <input type="radio" id="no" name="option" class="option">
+                            <label for="no" class="label2"><span>NEE</span></label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td data-label="Account">#0005</td>
+                    <td data-label=""></td>
+                    <td data-label="Due Date">Sekou Cisse</td>
+                    <td data-label="Amount">3D-Printer</td>
+                    <td data-label="Period">03/01/2022</td>
+                    <td data-label="Terug-Date">03/01/2022</td>
+                    <td data-label="Amount" style="position: relative;"><span class="pe"></span>Goed</td>
+                    <td data-label="Period">
+                        <div class="klop">
+                            <input type="radio" id="yes" name="option" class="option">
+                            <label for="yes" class="label1"><span>YA</span></label>
+                            <input type="radio" id="no" name="option" class="option">
+                            <label for="no" class="label2"><span>NEE</span></label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td data-label="Account">#0006</td>
+                    <td data-label=""></td>
+                    <td data-label="Due Date">BOUCHIHA Younes</td>
+                    <td data-label="Amount">3D-Printer</td>
+                    <td data-label="Period">03/01/2022</td>
+                    <td data-label="Terug-Date">03/01/2022</td>
+                    <td data-label="Amount" style="position: relative;"><span class="pe"></span>Goed</td>
+                    <td data-label="Period">
+                        <div class="klop">
+                            <input type="radio" id="yes" name="option" class="option">
+                            <label for="yes" class="label1"><span>YA</span></label>
+                            <input type="radio" id="no" name="option" class="option">
+                            <label for="no" class="label2"><span>NEE</span></label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td data-label="Account">#0007</td>
+                    <td data-label=""></td>
+                    <td data-label="Due Date">VAN IMPE Stef</td>
+                    <td data-label="Amount">3D-Printer</td>
+                    <td data-label="Period">03/01/2022</td>
+                    <td data-label="Terug-Date">03/01/2022</td>
+                    <td data-label="Amount" style="position: relative;"><span class="pe"></span>Goed</td>
+                    <td data-label="Period">
+                        <div class="klop">
+                            <input type="radio" id="yes" name="option" class="option">
+                            <label for="yes" class="label1"><span>YA</span></label>
+                            <input type="radio" id="no" name="option" class="option">
+                            <label for="no" class="label2"><span>NEE</span></label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td data-label="Account">#0008</td>
+                    <td data-label=""></td>
+                    <td data-label="Due Date">Sekou Cisse</td>
+                    <td data-label="Amount">3D-Printer</td>
+                    <td data-label="Period">03/01/2022</td>
+                    <td data-label="Terug-Date">03/01/2022</td>
+                    <td data-label="Amount" style="position: relative;"><span class="pe"></span>Goed</td>
+                    <td data-label="Period">
+                        <div class="klop">
+                            <input type="radio" id="yes" name="option" class="option">
+                            <label for="yes" class="label1"><span>YA</span></label>
+                            <input type="radio" id="no" name="option" class="option">
+                            <label for="no" class="label2"><span>NEE</span></label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td data-label="Account">#0009</td>
+                    <td data-label=""></td>
+                    <td data-label="Due Date">VAN IMPE Stef</td>
+                    <td data-label="Amount">3D-Printer</td>
+                    <td data-label="Period">03/01/2022</td>
+                    <td data-label="Terug-Date">03/01/2022</td>
+                    <td data-label="Amount" style="position: relative;"><span class="pe"></span>Goed</td>
+                    <td data-label="Period">
+                        <div class="klop">
+                            <input type="radio" id="yes" name="option" class="option">
+                            <label for="yes" class="label1"><span>YA</span></label>
+                            <input type="radio" id="no" name="option" class="option">
+                            <label for="no" class="label2"><span>NEE</span></label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td data-label="Account">#0010</td>
+                    <td data-label=""></td>
+                    <td data-label="Due Date">SAOUDI Yasmine</td>
+                    <td data-label="Amount">3D-Printer</td>
+                    <td data-label="Period">03/01/2022</td>
+                    <td data-label="Terug-Date">03/01/2022</td>
+                    <td data-label="Amount" style="position: relative;"><span class="pe"></span>Goed</td>
+                    <td data-label="Period">
+                        <div class="klop">
+                            <input type="radio" id="yes" name="option" class="option">
+                            <label for="yes" class="label1"><span>YA</span></label>
+                            <input type="radio" id="no" name="option" class="option">
+                            <label for="no" class="label2"><span>NEE</span></label>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table><br>
+        <button class="btn-1" type="submit">Add new</button>
+        <br>
     </div>
-   
 </body>
-<script src="Toestel_inleveren.js"></script>
+
+</html>
