@@ -46,7 +46,7 @@ Dit project werd gemaakt voor de MediaLab in de campus Kaai van de Erasmushogesc
    cd  Programming-project-grep
 7. Start het project
 
-nodemon 
+   °nodemon 
        
    
     
