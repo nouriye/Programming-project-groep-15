@@ -7,15 +7,16 @@ document.getElementById('Adminloginform').addEventListener("submit", event=> {
      user.password= document.getElementById('InputPassword').value;
     
     
-     
+      
     //check login
     getData("http://localhost:3000/login","POST",user).then(data=>{
        // console.log(data)
       // sessionStorage.setItem('user',JSON.stringify(data))
 
-       //if(data.status==="Authentication succesfull"){
-        alert(data.message);
+       if(data.status==="succes"){
+        window.location.href="../../../frontend/menu/menu.html"
        
+       }
       // }else alert(data.message);
 
     })

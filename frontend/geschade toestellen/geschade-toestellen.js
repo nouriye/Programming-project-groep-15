@@ -22,13 +22,13 @@ document.getElementById('search').addEventListener('submit', async function(even
 
 
 
-
+ 
 document.addEventListener('DOMContentLoaded',function(){
     let counter=1;
     let searchTerm = sessionStorage.getItem('searchTerm');
            
     if (!searchTerm) {
-       
+       console.log(searchTerm)
         return;
     }
     getData(`http://localhost:3000/uitleen_displayy/${searchTerm}`).then(data=>{
@@ -54,11 +54,11 @@ document.addEventListener('DOMContentLoaded',function(){
     });
     function clickitem(itemid){
         console.log(itemid)
-         
+        window.location.href= "../bevestiging(geschade)/geschbev.html";  
        deleteData(`http://localhost:3000/SchadeDelete/${itemid}`).then(Response=>{
-           
+         
        })
-   } 
+   }  
 
    async function deleteData(url) {
     let options = {
