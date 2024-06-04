@@ -36,14 +36,17 @@ Dit project werd gemaakt voor de MediaLab in de campus Kaai van de Erasmushogesc
 
    °git clone https://github.com/gebruikersnaam/projectnaam.git
 3. Navigeer naar de Directory in jouw terminal naar keuze.
-   °cd projectnaam
-4. Installeer de nodige dependencies
+
+    °cd projectnaam
+5. Installeer de nodige dependencies
+ 
    °npm install
-5. Navigeer naar de Backend folder
+6. Navigeer naar de Backend folder
+
    cd  Programming-project-grep
-6. Start het project
-   nodemon
-7. 
+7. Start het project
+
+nodemon 
        
    
     
