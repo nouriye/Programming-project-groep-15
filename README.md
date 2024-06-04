@@ -73,7 +73,7 @@ Hier zijn de bronnen die we hebben gebruikt voor dit project:
 - [kalender](https://fullcalendar.io/docs/handlers)
 - [Box-element](https://boxicons.com/usage#usage-as-font)
 - [form-Elémenten représenteren](https://developer.mozilla.org/fr/docs/Web/HTML/Element/form)
-- [con](https://www.flaticon.com/search?word=modifying)
+- [Icon](https://www.flaticon.com/search?word=modifying)
 - [Express](https://www.youtube.com/playlist?list=PLGsnrfn8XzXii2J5-Jpqufypu6upxcSGx)
 - [Calendar](https://fullcalendar.io/docs)
 - [Express](https://www.linkedin.com/learning/express-essentials-build-powerful-web-apps-with-node-js/generate-server-side-code-with-express)
