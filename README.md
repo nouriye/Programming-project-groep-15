@@ -74,12 +74,12 @@ Hier zijn de bronnen die we hebben gebruikt voor dit project:
 - [](https://boxicons.com/usage#usage-as-font)
 - [](https://developer.mozilla.org/fr/docs/Web/HTML/Element/form)
 - [](https://www.flaticon.com/search?word=modifying)
-- [](https://www.youtube.com/playlist?list=PLGsnrfn8XzXii2J5-Jpqufypu6upxcSGx)
+- [Express](https://www.youtube.com/playlist?list=PLGsnrfn8XzXii2J5-Jpqufypu6upxcSGx)
 - [Calendar](https://fullcalendar.io/docs)
 - [Express](https://www.linkedin.com/learning/express-essentials-build-powerful-web-apps-with-node-js/generate-server-side-code-with-express)
 - [Node&Express](https://www.linkedin.com/learning/building-a-website-with-node-js-and-express-js-3/dynamic-websites-with-node-and-express?contextUrn=urn%3Ali%3AlearningCollection%3A7201660944781824001)
-- [](https://www.linkedin.com/learning/node-js-essential-training-14888164/learning-the-node-js-basics)
-- [](https://www.npmjs.com/package/bcrypt)
-- [](https://www.dotenv.org/docs/)
+- [node](https://www.linkedin.com/learning/node-js-essential-training-14888164/learning-the-node-js-basics)
+- [bcrypt](https://www.npmjs.com/package/bcrypt)
+- [.env](https://www.dotenv.org/docs/)
 - 
 - 
