@@ -19,7 +19,7 @@ li {
 
 h1,
 h2 {
-    color: #57aa04d8;
+    color: #11059bd8;
 }
 
 .btn {
@@ -257,14 +257,28 @@ p {
 }
 
 .services-box {
-    margin: 0px 180px 180px 180px;
     background-color: #f8f8fb;
     color: rgb(6, 6, 5);
     border-radius: 10px;
     box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
     padding: 20px;
     text-align: center;
-    width: 400px;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.services-box button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 14px;
+    margin-top: 15px;
+}
+
+.services-box button:hover {
+    background-color: #0056b3;
 }
 
 .btn {
@@ -277,4 +291,5 @@ p {
 }
 
 .btn:hover {
-    background-color: #0056b3;}
+    background-color: #0056b3;
+}
