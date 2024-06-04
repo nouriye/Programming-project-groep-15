@@ -20,7 +20,7 @@ li {
 
 h1,
 h2 {
-    color: #084ad9d8;
+    color: #031dc8d8;
 }
 
 .btn {
@@ -28,9 +28,6 @@ h2 {
     color: white;
     padding: 3px 8px;
     text-align: center;
-
-
-
 }
 
 .btn:hover {
@@ -48,7 +45,7 @@ h2 {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-
+    flex-grow: 1;
 }
 
 .side-menu .brand-name {
@@ -91,7 +88,7 @@ h2 {
 .container .header {
     position: fixed;
     top: 0;
-    width: 80%;
+    width: 78.5vw;
     right: 0;
     background: white;
     display: flex;
@@ -144,10 +141,8 @@ h2 {
 
 .container .header .nav .search button img {
     width: 30px;
-    height: 30px;
+    height: 80px;
 }
-
-
 
 .container .header .nav .user {
     display: flex;
@@ -163,7 +158,6 @@ h2 {
     margin-left: auto;
 }
 
-
 .content {
 
     margin-top: 45px;
@@ -174,8 +168,6 @@ h2 {
     background-image: url(possessed-photography-jIBMSMs4_kA-unsplash.jpg);
     background-size: cover;
     height: 150px;
-
-
 }
 
 .content .content-2 .panal .bp .bp-1 {
@@ -227,9 +219,9 @@ p {
 
 table {
     border-collapse: collapse;
-    margin: 0;
     padding: 0;
     width: 100%;
+    height: 100%;
     table-layout: fixed;
     border-spacing: 0 15px;
 }
@@ -269,90 +261,4 @@ td {
     font-size: 12px;
     font-weight: bold;
     color: black;
-}
-
-.switch {
-    position: relative;
-    width: 100px;
-    height: 30px;
-    border-radius: 25px;
-    display: inline-block;
-}
-
-.switch input {
-    appearance: none;
-    width: 100px;
-    height: 30px;
-    border-radius: 25px;
-    background: #1e1e1e;
-    outline: none;
-    position: relative;
-    transition: background 0.4s;
-}
-
-.switch label {
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    right: 5px;
-    bottom: 5px;
-    background: #ffffff;
-    border-radius: 20px;
-    transition: left 0.4s 0.2s, right 0.4s 0.2s;
-}
-
-.switch input::before,
-.switch input::after {
-    content: attr(data-before);
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-weight: bold;
-    color: white;
-    text-align: center;
-    width: 50%;
-    transition: color 0.5s;
-}
-
-.switch input::before {
-    content: 'Yes';
-    left: 5px;
-    color: #57aa04d8;
-}
-
-.switch input::after {
-    content: 'No';
-    right: 5px;
-}
-
-.switch input:checked {
-    background: #ff9800;
-}
-
-.switch input:checked::before,
-.switch input:checked::after {
-    color: #ff9800;
-}
-
-.switch input:checked+label {
-    left: 50px;
-    right: 10px;
-    background: #1e1e1e;
-}
-
-.switch input:not(:checked) {
-    background: #1e1e1e;
-}
-
-.switch input:not(:checked)::before {
-    color: #ffffff;
-}
-
-.switch input:not(:checked)::after {
-    color: white;
-}
-
-.switch input:not(:checked)+label {
-    left: 5px;
-    right: 50px;
 }
