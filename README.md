@@ -20,7 +20,7 @@ Repo groep 15 - Programming Project 2024
 
 # About
 
-Dit project werd gemaakt voor de MediaLab in de campus Kaai van de Erasmushogeschool Brussel. Een makkelijke user interface om een toestel te kunnen reserven en voor de medewerker een effeciëntere manier om te werken. 
+Dit project werd gemaakt voor het MediaLab in de campus Kaai van de Erasmushogeschool Brussel. Een makkelijke user interface om een toestel te kunnen reserven en voor de medewerker een effeciëntere manier om te werken. 
 
 
 
@@ -34,16 +34,16 @@ Dit project werd gemaakt voor de MediaLab in de campus Kaai van de Erasmushogesc
 # How to use
 1. Kopieer de repo naar de gewenste locatie op uw computer.
 
-   °git clone https://github.com/gebruikersnaam/projectnaam.git
+   °git clone *projectlink*
 3. Navigeer naar de Directory in jouw terminal naar keuze.
 
-    °cd projectnaam
+    °cd Drive location/projectnaam
 5. Installeer de nodige dependencies
  
-   °npm install
+   °npm install --save 
 6. Navigeer naar de Backend folder
 
-   cd  Programming-project-grep
+   cd  Programming-project-groep15/backend
 7. Start het project
 
    °nodemon 
