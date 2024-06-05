@@ -75,6 +75,7 @@ Hier zijn de bronnen die we hebben gebruikt voor dit project:
 - [form-Elémenten représenteren](https://developer.mozilla.org/fr/docs/Web/HTML/Element/form)
 - [Icon](https://www.flaticon.com/search?word=modifying)
 - [Express](https://www.youtube.com/playlist?list=PLGsnrfn8XzXii2J5-Jpqufypu6upxcSGx)
+- [Calendar](https://chatgpt.com/share/4716a4cd-7f54-410f-afa8-491a73da01d2)
 - [Calendar](https://fullcalendar.io/docs)
 - [Express](https://www.linkedin.com/learning/express-essentials-build-powerful-web-apps-with-node-js/generate-server-side-code-with-express)
 - [Node&Express](https://www.linkedin.com/learning/building-a-website-with-node-js-and-express-js-3/dynamic-websites-with-node-and-express?contextUrn=urn%3Ali%3AlearningCollection%3A7201660944781824001)
