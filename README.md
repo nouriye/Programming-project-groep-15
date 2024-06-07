@@ -30,6 +30,24 @@ Dit project werd gemaakt voor het MediaLab in de campus Kaai van de Erasmushoges
 - JavaScript
 - MongoDB
 - Express.js
+- Node.js
+# libraries
+- HTML
+- CSS
+- JavaScript
+- MongoDB
+- Express.js
+- Node.js
+- .env /dotenv
+- fullcalendar
+- bcrypt
+- bodyparser
+- cors
+- uuid
+- mongoose
+- https
+- fs
+- console
 
 # How to use
 1. Kopieer de repo naar de gewenste locatie op uw computer.
