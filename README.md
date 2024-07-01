@@ -20,7 +20,7 @@ Repo groep 15 - Programming Project 2024
 
 # About
 
-Dit project werd gemaakt voor de MediaLab in de campus Kaai van de Erasmushogeschool Brussel. Een makkelijke user interface om een toestel te kunnen reserven en voor de medewerker een effeciëntere manier om te werken. 
+Dit project werd gemaakt voor het MediaLab in de campus Kaai van de Erasmushogeschool Brussel. Een makkelijke user interface om een toestel te kunnen reserven en voor de medewerker een effeciëntere manier om te werken. 
 
 
 
@@ -30,20 +30,38 @@ Dit project werd gemaakt voor de MediaLab in de campus Kaai van de Erasmushogesc
 - JavaScript
 - MongoDB
 - Express.js
+- Node.js
+# libraries
+- HTML
+- CSS
+- JavaScript
+- MongoDB
+- Express.js
+- Node.js
+- .env /dotenv
+- fullcalendar
+- bcrypt
+- bodyparser
+- cors
+- uuid
+- mongoose
+- https
+- fs
+- console
 
 # How to use
 1. Kopieer de repo naar de gewenste locatie op uw computer.
 
-   °git clone https://github.com/gebruikersnaam/projectnaam.git
+   °git clone *projectlink*
 3. Navigeer naar de Directory in jouw terminal naar keuze.
 
-    °cd projectnaam
+    °cd Drive location/projectnaam
 5. Installeer de nodige dependencies
  
-   °npm install
+   °npm install --save 
 6. Navigeer naar de Backend folder
 
-   cd  Programming-project-grep
+   cd  Programming-project-groep15/backend
 7. Start het project
 
    °nodemon 
@@ -70,16 +88,16 @@ Hier zijn de bronnen die we hebben gebruikt voor dit project:
 - [JavaScript documentation](https://www.w3schools.com/js/)
 - [](https://tailwindcss.com/docs/grid-template-columns)
 - [](https://git-scm.com/book/fr/v2/Les-branches-avec-Git-Branches-et-fusions%C2%A0%3A-les-bases)
-- [Kalender](https://fullcalendar.io/docs/handlers)
-- [Box-element](https://boxicons.com/usage#usage-as-font)
-- [form-Elémenten représenteren ](https://developer.mozilla.org/fr/docs/Web/HTML/Element/form)
-- [Icon](https://www.flaticon.com/search?word=modifying)
+- [](https://fullcalendar.io/docs/handlers)
+- [](https://boxicons.com/usage#usage-as-font)
+- [](https://developer.mozilla.org/fr/docs/Web/HTML/Element/form)
+- [](https://www.flaticon.com/search?word=modifying)
 - [](https://www.youtube.com/playlist?list=PLGsnrfn8XzXii2J5-Jpqufypu6upxcSGx)
 - [Calendar](https://fullcalendar.io/docs)
 - [Express](https://www.linkedin.com/learning/express-essentials-build-powerful-web-apps-with-node-js/generate-server-side-code-with-express)
 - [Node&Express](https://www.linkedin.com/learning/building-a-website-with-node-js-and-express-js-3/dynamic-websites-with-node-and-express?contextUrn=urn%3Ali%3AlearningCollection%3A7201660944781824001)
-- [](https://www.linkedin.com/learning/node-js-essential-training-14888164/learning-the-node-js-basics)
-- [](https://www.npmjs.com/package/bcrypt)
-- [](https://www.dotenv.org/docs/)
+- [node](https://www.linkedin.com/learning/node-js-essential-training-14888164/learning-the-node-js-basics)
+- [bcrypt](https://www.npmjs.com/package/bcrypt)
+- [.env](https://www.dotenv.org/docs/)
 - 
 - 
